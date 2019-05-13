@@ -1,0 +1,7 @@
+
+mybatis-plus:
+  mapper-locations: classpath:sysUser/mapper/*Mapper.xml
+  type-aliases-package: com.bzgwl.mybatis_plus.sysUser.entity
+server:
+  port: 8080
+
