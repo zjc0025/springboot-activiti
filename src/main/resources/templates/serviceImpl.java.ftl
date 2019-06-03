@@ -21,6 +21,7 @@ import java.util.List;
  * @Email  ${cfg.email}
  */
 @Service
+@SuppressWarnings("all")  //抑制各种黄线警告
 <#if kotlin>
 open class ${table.serviceImplName} : ${superServiceImplClass}<${table.mapperName}, ${entity}>(), ${table.serviceName} {
 
@@ -32,7 +33,7 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
     private ${table.mapperName} ${table.mapperName ? uncap_first};
 
     @Override
-    public List<${table.name ? cap_first}> list() {
+    public List<${entity}> list() {
 
        return ${table.mapperName ? uncap_first}.selectList(null);
     }
@@ -59,8 +60,8 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
         Wrapper wrapper = new QueryWrapper();
 
     <#list table.fields as field>
-        if(${entity ? uncap_first}.get${field.name ? cap_first}()!=null && !"".equals(${entity ? uncap_first}.get${field.name ? cap_first}())){
-            ((QueryWrapper) wrapper).eq("${field.name}",${entity ? uncap_first}.get${field.name ? cap_first}());
+        if(${entity ? uncap_first}.get${field.propertyName ? cap_first}()!=null && !"".equals(${entity ? uncap_first}.get${field.propertyName ? cap_first}())){
+            ((QueryWrapper) wrapper).eq("${field.name}",${entity ? uncap_first}.get${field.propertyName ? cap_first}());
         }
     </#list>
         IPage<${entity}> ${entity ? uncap_first}IPage = ${table.mapperName ? uncap_first}.selectPage(${entity ? uncap_first}Page, wrapper);

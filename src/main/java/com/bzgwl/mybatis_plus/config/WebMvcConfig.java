@@ -2,16 +2,17 @@ package com.bzgwl.mybatis_plus.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-public class WebMvcConfig  extends WebMvcConfigurerAdapter {
-
+public class WebMvcConfig  implements WebMvcConfigurer{
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/Static/**").addResourceLocations("classpath:/Static/");
-        registry.addResourceHandler("/static/layui/**").addResourceLocations("classpath:/static/layui/");
-        registry.addResourceHandler("/static/layui/css/**").addResourceLocations("classpath:/static/layui/css/");
-        super.addResourceHandlers(registry);
+        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
+        registry.addResourceHandler("/static/**/**/**/**").addResourceLocations("classpath:/static/**/**/**/");
+//        registry.addResourceHandler("/static/css/**").addResourceLocations("classpath:/static/css/");
+//        registry.addResourceHandler("/static/lib/**/**").addResourceLocations("classpath:/static/lib/**/");
+//        registry.addResourceHandler("/static/lib/layui/css/**").addResourceLocations("classpath:/static/lib/layui/css/");
+//        registry.addResourceHandler("/static/lib/layui/lay/modules/**").addResourceLocations("classpath:/static/lib/layui/lay/modules/");
     }
 }

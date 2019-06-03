@@ -15,7 +15,7 @@ public class JsonResponse {
 
 
     public JsonResponse() {
-        this.msg = "";
+        this.msg = "操作成功！";
         this.code = "0";   //layUi 返回正确响应code 为0
         Data = new ArrayList();
         this.count = 0L;

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<!--
+    @Describe 代码生成器生成
+    @Author   Professor_Kong
+    @Date     2019-05-21
+    @Email    logwto@163.com
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>添加用户</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/static/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="/static/css/scroll-bar.css">
+    <link rel="stylesheet" href="/static/css/sub-page.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_693759_wytlyqhtdtj1nhfr.css">
+</head>
+<body>
+<div class="ok-body">
+    <!--面包屑导航区域-->
+    <div class="ok-body-breadcrumb">
+        <span class="layui-breadcrumb">
+            <a><cite>首页</cite></a>
+            <a><cite>常用页面</cite></a>
+            <a><cite>用户列表</cite></a>
+            <a><cite>添加用户</cite></a>
+        </span>
+        <a class="layui-btn layui-btn-sm" href="javascript:location.replace(location.href);" title="刷新">
+            <i class="layui-icon layui-icon-refresh"></i>
+        </a>
+    </div>
+    <!--form表单-->
+    <form class="layui-form" lay-filter="operateFormFilter" id="operateId">
+              
+                <div class="layui-form-item" hidden>
+                <label class="layui-form-label" style="width: 50px;padding: 9px 2px">ID</label>
+                <div class="layui-input-block" style="margin-left: 65px">
+                <input style="height: 32px" type="text"  id="id" name="id" placeholder="请输入" autocomplete="off" class="layui-input">
+                </div>
+                </div>
+                            <div class="layui-form-item layui-inline" >
+                <label class="layui-form-label" style="width: 50px;padding: 9px 2px">用户ID</label>
+                <div class="layui-input-block" style="margin-left: 65px">
+            <input style="height: 32px" type="text" id="uid" name="uid" placeholder="请输入" autocomplete="off" class="layui-input">
+                </div>
+                </div>
+                            <div class="layui-form-item layui-inline" >
+                <label class="layui-form-label" style="width: 50px;padding: 9px 2px">角色ID</label>
+                <div class="layui-input-block" style="margin-left: 65px">
+            <input style="height: 32px" type="text" id="rid" name="rid" placeholder="请输入" autocomplete="off" class="layui-input">
+                </div>
+                </div>
+                            <div class="layui-form-item layui-inline" >
+                <label class="layui-form-label" style="width: 50px;padding: 9px 2px">创建时间</label>
+                <div class="layui-input-block" style="margin-left: 65px">
+            <input style="height: 32px" type="text" id="createtime" name="createtime" placeholder="请输入" autocomplete="off" class="layui-input">
+                </div>
+                </div>
+                            <div class="layui-form-item layui-inline" >
+                <label class="layui-form-label" style="width: 50px;padding: 9px 2px">修改时间</label>
+                <div class="layui-input-block" style="margin-left: 65px">
+            <input style="height: 32px" type="text" id="updatetime" name="updatetime" placeholder="请输入" autocomplete="off" class="layui-input">
+                </div>
+                </div>
+                            <div class="layui-form-item layui-inline" >
+                <label class="layui-form-label" style="width: 50px;padding: 9px 2px">状态 0 删除 1、使用</label>
+                <div class="layui-input-block" style="margin-left: 65px">
+            <input style="height: 32px" type="text" id="status" name="status" placeholder="请输入" autocomplete="off" class="layui-input">
+                </div>
+                </div>
+        <div class="layui-form-item" style="text-align: right">
+            <div class="layui-input-block" style="margin-right: 40px">
+                <button class="layui-btn" style="height: 32px; line-height: 32px" lay-submit lay-filter="operateFilter" id="operateSubBtn">提交</button>
+                <button type="reset" style="height: 32px; line-height: 32px" class="layui-btn">重置</button>
+            </div>
+        </div>
+    </form>
+</div>
+<!--js逻辑-->
+<script src="/static/lib/layui/layui.js"></script>
+<script th:inline="none">
+
+    var formBackFillData;
+
+    function getData(data){
+        formBackFillData = JSON.stringify(data);
+    }
+    layui.use(['element', 'form', 'jquery', 'laydate'], function () {
+        var element = layui.element;
+        var table = layui.table;
+        var form = layui.form;
+        var $ = layui.jquery;
+        var laydate = layui.laydate;
+
+        // laydate.render({
+        //     elem: '#birthday',
+        //     type: "datetime"
+        // });
+
+        form.verify({
+            birthdayVerify: [/^((((1[6-9]|[2-9]\d)\d{2})-(0?[13578]|1[02])-(0?[1-9]|[12]\d|3[01]))|(((1[6-9]|[2-9]\d)\d{2})-(0?[13456789]|1[012])-(0?[1-9]|[12]\d|30))|(((1[6-9]|[2-9]\d)\d{2})-0?2-(0?[1-9]|1\d|2[0-8]))|(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))-0?2-29-))(\s(([01]\d{1})|(2[0123])):([0-5]\d):([0-5]\d))?$/, '日期格式不正确']
+        });
+
+
+        form.on('submit(operateFilter)', function (data) {
+            console.log(data.field);
+
+
+            $.ajax({
+                url:'/sys/userrole/addOrUpdate',
+                type:'post',
+                dataType:'json',
+                data:data.field,
+                success: function (res) {
+                    if(res.code== 1){
+                        layer.alert("操作异常，请联系管理员！")
+                    }else{
+                        //重载table  触发父页面查询
+                        parent.layui.$("#subBtn").click();
+                        layer.msg("操作成功！", {icon: 6, time: 1000, anim: 4}, function () {
+                            //关闭 表单弹窗
+                            parent.layer.close(parent.layer.getFrameIndex(window.name));
+                        });
+                    }
+                }
+            })
+
+            return false;
+        });
+
+        function init() {
+            //清空表单
+            $("#operateId")[0].reset();
+            console.log(typeof(formBackFillData) != "undefined" && formBackFillData!= '')
+
+            if(typeof(formBackFillData) != "undefined" && formBackFillData!=''){
+                form.val("operateFormFilter", JSON.parse(formBackFillData));
+                formBackFillData ='';
+            }
+        };
+
+        init();
+    })
+</script>
+</body>
+</html>

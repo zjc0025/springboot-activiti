@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>首页--layui后台管理模板</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../css/common.css"/>
+    <link rel="stylesheet" href="../../lib/layui/css/layui.css" media="all"/>
+    <script type="text/javascript" src="../../lib/echarts/echarts.min.js"></script>
+    <script type="text/javascript" src="../../lib/echarts/world/js/china.js"></script>
+    <script type="text/javascript" src="../../lib/echarts/world/js/province/chongqing.js"></script>
+    <script type="text/javascript" src="../../lib/echarts/world/js/province/sichuan.js"></script>
+    <script type="text/javascript" src="../../lib/echarts/world/js/province/guangdong.js"></script>
+    <style type="text/css">
+        .map{
+            padding: 20px;
+            height: 350px;
+        }
+    </style>
+</head>
+<body class="childrenBody home">
+<div class="layui-row layui-col-space15">
+    <div class="layui-col-md6">
+        <div class="layui-card">
+            <div class="yskj-card-body clearfix cart-data">
+                <div class="map" id="china1"></div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-md6">
+        <div class="layui-card">
+            <div class="yskj-card-body clearfix cart-data">
+                <div class="map" id="china_a"></div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-md6">
+        <div class="layui-card">
+            <div class="yskj-card-body clearfix cart-data">
+                <div class="map" id="china_b"></div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-md6">
+        <div class="layui-card">
+            <div class="yskj-card-body clearfix cart-data">
+                <div class="map" id="china_c"></div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-md6">
+        <div class="layui-card">
+            <div class="yskj-card-body clearfix cart-data">
+                <div class="map" id="china_d"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="../../lib/layui/layui.js"></script>
+<script type="text/javascript">
+    function clone(origin) {
+      return JSON.parse(JSON.stringify(origin))
+    }
+  layui.config({
+    base: "../../js/"
+  }).use(["jquery", "mapTest","echartsData"], function () {
+    var $ = layui.jquery,
+      mapTest = layui.mapTest,
+      echartsData = layui.echartsData;
+    echartsData.mapChina.series[0].data = echartsData.Address;//地图数据
+    var chinaData = echartsData.mapChina;
+    var option_a = mapTest.option_a;
+    var option_b = mapTest.option_b;
+    var option_c = mapTest.option_c;
+    var option_d = mapTest.option_d;
+
+    var china1 = echarts.init($('#china1')[0]);
+    var china_a = echarts.init($('#china_a')[0]);
+    var china_b = echarts.init($('#china_b')[0]);
+    var china_c = echarts.init($('#china_c')[0]);
+    var china_d = echarts.init($('#china_d')[0]);
+
+    china1.setOption(chinaData);
+    china_a.setOption(option_a);
+    china_b.setOption(option_b);
+    china_c.setOption(option_c);
+    china_d.setOption(option_d);
+
+
+  });
+</script>

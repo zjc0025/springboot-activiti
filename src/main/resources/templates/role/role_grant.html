@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<!--
+    @Describe 代码生成器生成
+    @Author   Professor_Kong
+    @Date     2019-05-21
+    @Email    logwto@163.com
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>角色授权</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/static/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="/static/css/scroll-bar.css">
+    <link rel="stylesheet" href="/static/css/sub-page.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_693759_wytlyqhtdtj1nhfr.css">
+
+    <!--ztree-->
+    <link rel="stylesheet" href="/static/ztreecss/zTreeStyle.css" type="text/css">
+    <script type="text/javascript" src="/static/ztree/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="/static/ztree/jquery.ztree.core.js"></script>
+    <script type="text/javascript" src="/static/ztree/jquery.ztree.excheck.js"></script>
+
+
+</head>
+<body>
+<div class="ok-body">
+    <!--面包屑导航区域-->
+    <div class="ok-body-breadcrumb">
+        <span class="layui-breadcrumb">
+            <a><cite>首页</cite></a>
+            <a><cite>常用页面</cite></a>
+            <a><cite>角色列表</cite></a>
+            <a><cite>授权操作</cite></a>
+        </span>
+        <a class="layui-btn layui-btn-sm" href="javascript:location.replace(location.href);" title="刷新">
+            <i class="layui-icon layui-icon-refresh"></i>
+        </a>
+    </div>
+
+    <!--form表单-->
+    <form class="layui-form layui-form-pane ok-form">
+        <div class="layui-form-item">
+            <div class="layui-input-block" style="margin-left: 48px">
+                <!--权限树-->
+                <ul id="treeDemo" class="ztree"></ul>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block" style="margin-left: 48px">
+                <button  class="layui-btn layui-btn-sm" id="selectAll">全选</button>
+                <button  class="layui-btn layui-btn-sm" id="cancelAll">取消全选</button>
+                <button class="layui-btn layui-btn-sm"  id="subBtn">提交</button>
+            </div>
+        </div>
+    </form>
+</div>
+<!--js逻辑-->
+<script src="/static/lib/layui/layui.js"></script>
+<script th:inline="none">
+
+
+
+    //js 方式
+    var cs2 = window.parent.document.getElementById("hidArea").value;
+    //jquery 方式   前提引入 jQuery
+    var roleId = $("#hidArea",parent.document).val();
+
+    layui.use(['element', 'form', 'laydate'], function () {
+
+        // laydate.render({
+        //     elem: '#birthday',
+        //     type: "datetime"
+        // });
+
+        <!-- zTree start -->
+        var setting = {
+            check: {
+                enable: true
+            },
+            data: {
+                simpleData: {
+                    enable: true
+                }
+            }
+        };
+
+        console.log(roleId)
+        console.log("cs2:"+cs2)
+
+        if(typeof(roleId)!= 'undefined' && roleId!==''){
+            $.ajax({
+                url:'/sys/permission/getPermissionByRoleId',
+                dateType:'json',
+                type:"post",
+                data:{"id":roleId},
+                success:function (res) {
+                    var zNodes = JSON.stringify(res);
+                    zNodes = zNodes.replace(new RegExp("pid", 'g'),"pId");
+                    int(JSON.parse(zNodes));
+                }
+            })
+        }
+        var code;
+        function setCheck() {
+            var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+                type = { "Y":"ps", "N":"ps"};
+            zTree.setting.check.chkboxType = type;
+            showCode('setting.check.chkboxType = { "Y" : "' + type.Y + '", "N" : "' + type.N + '" };');
+        }
+        function showCode(str) {
+            if (!code) code = $("#code");
+            code.empty();
+            code.append("<li>"+str+"</li>");
+        }
+
+        var ZTREE;
+        function int(zNodes){
+            ZTREE=  $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+            setCheck();
+            $("#py").bind("change", setCheck);
+            $("#sy").bind("change", setCheck);
+            $("#pn").bind("change", setCheck);
+            $("#sn").bind("change", setCheck);
+        };
+
+        //全选
+        $("#selectAll").click(function () {
+            ZTREE.checkAllNodes(true);
+            return false;
+        })
+        //取消全选
+        $("#cancelAll").click(function () {
+            ZTREE.checkAllNodes(false);
+            return false;
+        })
+
+
+        $("#subBtn").click(function () {
+            var nodes = ZTREE.getCheckedNodes(true)
+            // console.log(JSON.stringify(nodes));
+            var array = new Array();
+            if(typeof nodes != 'undefined' && nodes.length>0){
+                $.each(nodes,function (key,val) {
+                    array.push(val.id)
+                })
+            }
+            if(typeof(roleId)!='undefined'){
+                var data = {rid: roleId, ids:array}
+                console.log(data)
+                $.ajax({
+                    url:'/sys/permission/grant',
+                    data:data,
+                    type:'post',
+                    dataType:'json',
+                    success: function (res) {
+
+                        if(res.code=='0'){
+                            layer.msg("操作成功！", {icon: 6, time: 1000, anim: 4}, function () {
+                                //关闭 表单弹窗
+                                parent.layer.close(parent.layer.getFrameIndex(window.name));
+                            });
+                        }else{
+                            layer.alert(res.msg);
+                        }
+                    }
+                })
+            }
+            return false;
+        })
+
+
+    });
+
+</script>
+</body>
+</html>

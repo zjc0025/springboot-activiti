@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+   <meta charset="UTF-8">
+   <title>ok-admin v2.0 | 很赞的后台模版</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <meta name="keywords" content="ok-admin v2.0,ok-admin网站后台模版,后台模版下载,后台管理系统模版,HTML后台模版下载">
+   <meta name="description" content="ok-admin v2.0，顾名思义，很赞的后台模版，它是一款基于Layui框架的轻量级扁平化且完全免费开源的网站后台管理系统模板，适合中小型CMS后台系统。">
+   <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon"/>
+   <link rel="stylesheet" href="/static/lib/layui/css/layui.css">
+   <link rel="stylesheet" href="/static/css/okadmin-v2.css"/>
+   <link rel="stylesheet" href="/static/css/login.css"/>
+</head>
+<body>
+<div id="app">
+   <form class="layui-form">
+      <div class="login_face"><img src="/static/images/a.png" class="userAvatar"></div>
+      <div class="layui-form-item input-item">
+         <label for="userName">用户名</label>
+         <input type="text" lay-verify="required" id="username" name="username" placeholder="请输入用户名" autocomplete="off"
+                class="layui-input">
+      </div>
+      <div class="layui-form-item input-item">
+         <label for="password">密码</label>
+         <input type="password" lay-verify="required|pass" id="password" name="password" placeholder="请输入密码" autocomplete="off"
+                class="layui-input">
+      </div>
+      <div class="layui-form-item input-item" id="imgCode">
+         <label for="code">验证码</label>
+         <input type="text" lay-verify="yzmCode" name="code" placeholder="请输入验证码" autocomplete="off" id="code"
+                class="layui-input">
+         <div class="img ok-none-select" id="codeImg"></div>
+      </div>
+      <div class="layui-form-item">
+         <button class="layui-btn layui-block" lay-filter="login" lay-submit="">登录</button>
+      </div>
+   </form>
+</div>
+
+<!--js逻辑-->
+<script src="/static/lib/layui/layui.js"></script>
+<script th:inline="none">
+
+  layui.use(['form', 'jquery', 'okGVerify'], function () {
+    var form = layui.form;
+    var $ = layui.jquery;
+    var okGVerify = layui.okGVerify;
+    var verifyCode = new okGVerify("#codeImg");
+    var res = verifyCode.validate(document.getElementById("code").value);
+    // form.verify({
+    //   pass: [
+    //     /^[\S]{6,12}$/,
+    //     '密码必须6到12位，且不能出现空格'
+    //   ],
+    //    //验证码校验
+    //   yzmCode: function (val) {
+    //     if (verifyCode.validate(val) != "true") {
+    //       return verifyCode.validate(val)
+    //     }
+    //   }
+    // });
+
+    form.on('submit(login)', function (data) {
+       // layer.msg("登陆中...", {icon: 6, time: 1000, anim: 0});
+       var name = $("#username").val();
+       var psss = $("#password").val();
+       var jf = {username: name,password:psss};
+       $.ajax({
+          url:"/loginIn",
+          data:jf,
+          dataType:"json",
+          type:'post',
+          success:function (res) {
+             layer.msg(res.msg, {icon: 6, time: 1000, anim: 0});
+             if(res.code=='0'){
+                setTimeout(function () {
+                   window.location = "/index"
+                },1000);
+             }
+          }
+       })
+
+      return false;
+    });
+
+    //表单输入效果
+    $("#app .input-item .layui-input").click(function (e) {
+      e.stopPropagation();
+      $(this).addClass("layui-input-focus").find(".layui-input").focus();
+    })
+    $("#app .layui-form-item .layui-input").focus(function () {
+      $(this).parent().addClass("layui-input-focus");
+    })
+    $("#app .layui-form-item .layui-input").blur(function () {
+      $(this).parent().removeClass("layui-input-focus");
+      if ($(this).val() != '') {
+        $(this).parent().addClass("layui-input-active");
+      } else {
+        $(this).parent().removeClass("layui-input-active");
+      }
+    })
+  });
+</script>
+</body>
+</html>

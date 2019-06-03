@@ -1,10 +1,13 @@
 package com.bzgwl.mybatis_plus.utils;
 
+import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.InjectionConfig;
 import com.baomidou.mybatisplus.generator.config.*;
+import com.baomidou.mybatisplus.generator.config.converts.MySqlTypeConvert;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
+import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 
@@ -42,13 +45,13 @@ public class MyGenerator {
         //指定自定义模板路径, 位置：/resources/templates/entity2.java.ftl(或者是.vm)
         //注意不要带上.ftl(或者是.vm), 会根据使用的模板引擎自动识别
         TemplateConfig templateConfig = new TemplateConfig().setEntity("templates/entity.java");
-
         AutoGenerator mpg = new AutoGenerator();
         //配置自定义模板
         mpg.setTemplate(templateConfig);
 
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
+        gc.setDateType(DateType.ONLY_DATE);  //设置日期类型， 数据库为datetime 则转换为Date
         String projectPath = System.getProperty("user.dir");
         System.out.println(projectPath);
         gc.setOutputDir(projectPath + "/src/main/java");  //生成文件放置位置
@@ -58,6 +61,7 @@ public class MyGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
+        dsc.setDbType(DbType.MYSQL);  //设置数据库类型
         dsc.setUrl(dataSourceUrl);
         // dsc.setSchemaName("public");
         dsc.setDriverName(driverClassName);
@@ -88,22 +92,33 @@ public class MyGenerator {
             @Override
             public String outputFile(TableInfo tableInfo) {
                 // 自定义输入文件名称   + pc.getModuleName()
-                return projectPath + "/src/main/resources/"+ pc.getModuleName()
-                        + "/mapper/" + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
+                return projectPath + "/src/main/resources/"
+                        + "mapper/" + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
             }
         });
         cfg.setFileOutConfigList(focList);
         mpg.setCfg(cfg);
         mpg.setTemplate(new TemplateConfig().setXml(null));
 
-        // 自定义 xxCRUD.html 生成
-        focList.add(new FileOutConfig("/templates/list.html.ftl") {
+        // 自定义 xxx.html 生成
+        focList.add(new FileOutConfig("/templates/sys_tmp/user_list.html.ftl") {
             @Override
             public String outputFile(TableInfo tableInfo) {
                 // 自定义输入文件名称
                 return projectPath+"/src/main/resources/templates/"
                         + LowAndUpConvert.lowFirst(tableInfo.getEntityName())+"/"
-                        + LowAndUpConvert.lowFirst(tableInfo.getEntityName()) + "CRUD.html";
+                        + LowAndUpConvert.lowFirst(tableInfo.getEntityName()) + "_list.html";
+            }
+        });
+
+//         自定义 xxx.addOrUpdate.html 生成
+        focList.add(new FileOutConfig("/templates/sys_tmp/user_addOrUpdate.html.ftl") {
+            @Override
+            public String outputFile(TableInfo tableInfo) {
+                // 自定义输入文件名称
+                return projectPath+"/src/main/resources/templates/"
+                        + LowAndUpConvert.lowFirst(tableInfo.getEntityName())+"/"
+                        + LowAndUpConvert.lowFirst(tableInfo.getEntityName()) + "_addOrUpdate.html";
             }
         });
         cfg.setFileOutConfigList(focList);
@@ -118,11 +133,11 @@ public class MyGenerator {
 //        strategy.setSuperEntityClass(pagePrefix+".BaseEntity");
         strategy.setEntityLombokModel(true);
 //        strategy.setSuperControllerClass(pagePrefix+".BaseController");
-        strategy.setInclude(tableName);
+        strategy.setInclude(tableName);  //需要生成的表名 ，可以是string集合
 //        strategy.setSuperEntityColumns("id");
         strategy.setControllerMappingHyphenStyle(true); //controller设置 RequestMapping
-        strategy.setRestControllerStyle(true); //设置RestController
-        strategy.setTablePrefix(pc.getModuleName() + "_");
+        strategy.setRestControllerStyle(false); //设置RestController
+//        strategy.setTablePrefix(pc.getModuleName() + "_");  //数据库表名前缀
         mpg.setStrategy(strategy);
         // 选择 freemarker 引擎需要指定如下加，注意 pom 依赖必须有！
         mpg.setTemplateEngine(new FreemarkerTemplateEngine());
