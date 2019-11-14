@@ -12,6 +12,8 @@ import com.bzgwl.mybatis_plus.utils.JsonResponse;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 /**
  *  代码生成器
@@ -30,8 +32,26 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     @Override
     public List<User> list() {
 
-       return userMapper.selectList(null);
+
+        List<User> userList = userMapper.selectList(null);
+
+        List<String> listNames = userList.stream().map( i ->(
+           i.getName()
+        )).collect(Collectors.toList());
+
+        boolean match = userList.stream().allMatch(new Predicate<User>() {
+            @Override
+            public boolean test(User user) {
+                if (user.getName().equals("123")) {
+                    return true;
+                }
+                return false;
+            }
+        });
+        return userList;
     }
+
+
 
     /**
     * 分页查询
@@ -52,34 +72,34 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         //开启分页
         Page userPage = new Page(page,limit);
         //查询构造器
-        Wrapper wrapper = new QueryWrapper();
+        QueryWrapper wrapper = new QueryWrapper();
 
         if(user.getId()!=null && !"".equals(user.getId())){
-            ((QueryWrapper) wrapper).eq("id",user.getId());
+            wrapper.eq("id",user.getId());
         }
         if(user.getUsername()!=null && !"".equals(user.getUsername())){
-            ((QueryWrapper) wrapper).eq("username",user.getUsername());
+            wrapper.eq("username",user.getUsername());
         }
         if(user.getName()!=null && !"".equals(user.getName())){
-            ((QueryWrapper) wrapper).eq("name",user.getName());
+           wrapper.eq("name",user.getName());
         }
         if(user.getPassword()!=null && !"".equals(user.getPassword())){
-            ((QueryWrapper) wrapper).eq("password",user.getPassword());
+            wrapper.eq("password",user.getPassword());
         }
         if(user.getStatus()!=null && !"".equals(user.getStatus())){
-            ((QueryWrapper) wrapper).eq("status",user.getStatus());
+            wrapper.eq("status",user.getStatus());
         }
         if(user.getEmail()!=null && !"".equals(user.getEmail())){
-            ((QueryWrapper) wrapper).eq("email",user.getEmail());
+            wrapper.eq("email",user.getEmail());
         }
         if(user.getPhone()!=null && !"".equals(user.getPhone())){
-            ((QueryWrapper) wrapper).eq("phone",user.getPhone());
+            wrapper.eq("phone",user.getPhone());
         }
         if(user.getCreateTime()!=null && !"".equals(user.getCreateTime())){
-            ((QueryWrapper) wrapper).eq("createTime",user.getCreateTime());
+            wrapper.eq("createTime",user.getCreateTime());
         }
         if(user.getLogins()!=null && !"".equals(user.getLogins())){
-            ((QueryWrapper) wrapper).eq("logins",user.getLogins());
+            wrapper.eq("logins",user.getLogins());
         }
         IPage<User> userIPage = userMapper.selectPage(userPage, wrapper);
 
