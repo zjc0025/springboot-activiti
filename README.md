@@ -7,10 +7,19 @@
 
 效果展示：
 
-流程执行完
+首页
 ![输入图片说明](https://images.gitee.com/uploads/images/2019/1218/132607_37a29ce6_914343.png "屏幕截图.png")
 
+并行网关下单方执行完成
+![输入图片说明](https://images.gitee.com/uploads/images/2019/1218/134750_44a8107b_914343.png "屏幕截图.png")
+
+驳回操作
+![输入图片说明](https://images.gitee.com/uploads/images/2019/1218/135129_47a27fab_914343.png "屏幕截图.png")
+
+流程执行完
 ![输入图片说明](https://images.gitee.com/uploads/images/2019/1218/132713_a80c6ae1_914343.png "屏幕截图.png")
+
+![输入图片说明](https://images.gitee.com/uploads/images/2019/1218/135310_040c58d1_914343.png "屏幕截图.png")
 
 流程设计器：
 ![流程设计器](https://images.gitee.com/uploads/images/2019/1218/133021_4da3a3f8_914343.png "屏幕截图.png")
