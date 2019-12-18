@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>文章列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/static/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="/static/css/scroll-bar.css">
+    <link rel="stylesheet" href="/static/css/sub-page.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_693759_wytlyqhtdtj1nhfr.css">
+    <link rel="stylesheet" href="/static/lib/nprogress/nprogress.css">
+</head>
+<body>
+<div class="ok-body">
+    <!--面包屑导航区域-->
+    <div class="ok-body-breadcrumb">
+            <span class="layui-breadcrumb">
+                <a><cite>工作流</cite></a>
+                <a><cite>我的工作</cite></a>
+            </span>
+        <a class="layui-btn layui-btn-sm" href="javascript:location.replace(location.href);" title="刷新">
+            <i class="layui-icon layui-icon-refresh"></i>
+        </a>
+    </div>
+    <!--模糊搜索区域-->
+    <div class="layui-row">
+        <form class="layui-form layui-col-md12 ok-search">
+            <input class="layui-input" placeholder="开始日期" autocomplete="off" id="startTime">
+            <input class="layui-input" placeholder="截止日期" autocomplete="off" id="endTime">
+            <input class="layui-input" placeholder="请输入标题" autocomplete="off">
+            <button class="layui-btn" lay-submit="" lay-filter="search">
+                <i class="layui-icon layui-icon-search"></i>
+            </button>
+        </form>
+    </div>
+    <!--工具栏-->
+    <script  type="text/html" id="textBar">
+        <!--<button class="layui-btn layui-btn-normal" id="quickEstablish">-->
+            <!--<i class="iconfont icon-shangsheng"></i>快速申请-->
+        <!--</button>-->
+        <button class="layui-btn" id="addPro" lay-event="addPro">
+            <i class="layui-icon">&#xe61f;</i>新建流程
+        </button>
+        <button class="layui-btn layui-btn-normal" id="importProcess" lay-event="impPro">
+            <i class="iconfont icon-shangsheng"></i>导入流程
+        </button>
+        <button class="layui-btn layui-btn-danger" id="batchDel" lay-event="batchDel">
+            <i class="layui-icon layui-icon-delete"></i>批量删除
+        </button>
+        <button class="layui-btn layui-btn-danger" id="oneDel" lay-event="oneDel">
+            <i class="layui-icon layui-icon-delete"></i>一键删除
+        </button>
+        <!--<span>共有数据：<i id="countNum"></i> 条</span>-->
+    </script>
+    <!--数据表格-->
+    <table class="layui-hide" id="tableId" lay-filter="tableFilter"></table>
+</div>
+<!--js逻辑-->
+<script src="/static/lib/layui/layui.js"></script>
+<script src="/static/lib/nprogress/nprogress.js"></script>
+<script th:inline="none">
+    // 进度条加载提示
+    NProgress.start();
+    window.onload = function () {
+        NProgress.done();
+    }
+    // layui相关
+    layui.use(['element', 'table', 'form', 'jquery', 'laydate','upload','layer'], function () {
+        let table = layui.table;
+        let form = layui.form;
+        let $ = layui.jquery;
+        let upload = layui.upload;
+        let laydate = layui.laydate;
+        let layer = layui.layer;
+
+        laydate.render({
+            elem: '#startTime',
+            type: "datetime"
+        });
+
+        laydate.render({
+            elem: '#endTime',
+            type: "datetime"
+        });
+
+        table.render({
+            elem: '#tableId',
+            url: '/web/act/proDefList',
+            id: 'reloadId',
+            page: true,
+            height: 'full-130',
+            toolbar: '#textBar',
+            cols: [[
+                {field: '序号', type: 'numbers'},
+                {type: 'checkbox'},
+                {field: 'name', title: '名称', width: 260},
+                {field: 'key', title: 'key', width: 280},
+                {field: 'version', title: '版本', width: 130},
+                {title: '操作', width: 200, templet: '#operationTpl', align: 'center'}
+                , {field: 'id', width: 1, style:'display:none'}
+            ]],
+            done: function (res, curr, count) {
+                // $("#countNum").text(count);
+                upload.render({
+                    elem: '#importProcess'
+                    ,url: '/web/act/importProcess'
+                    ,accept: 'file' //普通文件
+                    ,done: function(res){
+
+                        layer.alert(res.msg)
+                        if(res.code==0){
+                            table.reload('reloadId')
+                        }
+                    }
+                });
+            }
+        });
+
+        form.on('submit(search)', function () {
+            layer.msg('正在查询，请稍后...');
+            return false;
+        });
+
+        //表格头工具栏事件
+        table.on('toolbar(tableFilter)', function (obj) {
+            let checkStatus = table.checkStatus(obj.config.id);
+            switch (obj.event) {
+                case 'addPro':
+                    layer.open({
+                        title: '新增流程',
+                        type: 2,
+                        shade: false,
+                        maxmin: true,
+                        shade: 0.5,
+                        anim: 4,
+                        area: ['100%', '100%'],
+                        // content: '/web/act/addIndex',
+                        content: 'http://localhost:9013/',
+                        zIndex: layer.zIndex,
+                        // skin: 'layui-layer-molv',
+                    });
+                    break;
+
+                // case 'impPro':
+                //     upload.render({
+                //         // elem: '#importProcess'
+                //          url: '/web/act/importProcess'
+                //         , accept: 'file' //普通文件
+                //         , done: function (res) {
+                //             layer.alert(res.msg)
+                //             if (res.code == 0) {
+                //                 table.reload('reloadId')
+                //             }
+                //         }
+                //     });
+                //     break;
+
+                case 'batchDel':
+                    layer.confirm("确定要批量删除吗？", {skin: 'layui-layer-lan', icon: 2, title: '提示', anim: 6}, function () {
+                        let checkStatus = table.checkStatus(obj.config.id);
+                        let rows = checkStatus.data.length;
+                        let ids = new Array();
+                        if (rows > 0) {
+                            for (let i = 0; i < checkStatus.data.length; i++) {
+                                ids.push(checkStatus.data[i].id);
+                            }
+                            console.log("选择的id-->" + ids);
+                            $.ajax({
+                                url:'/web/act/batchDel',
+                                type:'post',
+                                data:{ids:ids},
+                                success:function (res) {
+                                    layer.msg(res.msg, {icon: 1, time: 1000}, function () {
+                                        $(".layui-laypage-btn")[0].click();
+                                    });
+                                }
+                            })
+
+                        } else {
+                            layer.msg('未选择有效数据', {
+                                offset: 't',
+                                anim: 6
+                            });
+                        }
+                    });
+                    break;
+                // 写在这里可以避免表格重新加载带来的按钮绑定失效
+                case 'oneDel':
+                    layer.confirm("确定要一键删除吗？不可逆！", {
+                        skin: 'layui-layer-lan',
+                        icon: 2,
+                        title: '提示',
+                        anim: 6
+                    }, function () {
+                        $.ajax({
+                            url: '/web/act/oneDel',
+                            success: function (res) {
+                                layer.alert(res.msg);
+                                table.reload('reloadId')
+                            }
+                        })
+                    });
+                    break;
+            }
+        })
+
+        //数据行监听事件
+        table.on('tool(tableFilter)', function (obj) {
+                let data = obj.data;
+                console.log(data)
+                let layEvent = obj.event;
+
+                //新建流程实例
+                if (layEvent === 'add') {
+                    layer.open({
+                        title: '新建请假流程',
+                        type: 2,
+                        shade: false,
+                        maxmin: true,
+                        shade: 0.5,
+                        anim: 4,
+                        area: ['80%', '80%'],
+                        // btn:['保存','取消'],
+                        content: '/web/act/newProBefore',
+                        zIndex: layer.zIndex,
+                        // skin: 'layui-layer-molv',
+                        success: function (layero, index) {
+                            let body = layer.getChildFrame('body', index);
+                            let iframeWin = window[layero.find('iframe')[0]['name']];//得到iframe页的窗口对象，执行iframe页的方法：
+                            iframeWin.getData(data);
+                        }
+                        // end: function () {
+                        //     $(".layui-laypage-btn")[0].click();
+                        // }
+                    });
+
+                }
+                //查看流程图
+                if (layEvent === 'edit') {
+                    layer.open({
+                        title: '查看流程',
+                        type: 2,
+                        shade: false,
+                        maxmin: true,
+                        shade: 0.5,
+                        area: ['100%', '100%'],
+                        content: '/web/act/view',
+                        zIndex: layer.zIndex,
+                        end: function () {
+                            $(".layui-laypage-btn")[0].click();
+                        }
+                    });
+                } else if (layEvent === 'del') {
+                    layer.confirm("确定要删除吗？", {skin: 'layui-layer-lan', icon: 2, title: '提示', anim: 6}, function () {
+                        layer.msg("操作成功！", {icon: 1, time: 1000});
+                    });
+                }
+                return false;
+            });
+
+
+            //新增流程
+            // $("#addPro").bind('click',function () {
+            //     layer.open({
+            //         title: '新增流程',
+            //         type: 2,
+            //         shade: false,
+            //         maxmin: true,
+            //         shade: 0.5,
+            //         anim: 4,
+            //         area: ['100%', '100%'],
+            //         // content: '/web/act/addIndex',
+            //         content: 'http://localhost:9013/',
+            //         zIndex: layer.zIndex,
+            //         // skin: 'layui-layer-molv',
+            //     });
+            //     return false;
+            // })
+
+            //批量删除
+            // $("#batchDel").bind('click',function () {
+            //
+            //     layer.confirm("确定要批量删除吗？", {skin: 'layui-layer-lan', icon: 2, title: '提示', anim: 6}, function () {
+            //         let checkStatus = table.checkStatus('tableId');
+            //         let rows = checkStatus.data.length;
+            //         if (rows > 0) {
+            //             let idsStr = "";
+            //             for (let i = 0; i < checkStatus.data.length; i++) {
+            //                 idsStr += checkStatus.data[i].id + ',';
+            //             }
+            //             console.log("选择的id-->" + idsStr);
+            //             layer.msg("操作成功！", {icon: 1, time: 1000}, function () {
+            //                 $(".layui-laypage-btn")[0].click();
+            //             });
+            //         } else {
+            //             layer.msg('未选择有效数据', {
+            //                 offset: 't',
+            //                 anim: 6
+            //             });
+            //         }
+            //     });
+            //     return false;
+            // })
+
+            //一键删除
+            // $("#oneDel").bind('click',function () {
+            //     layer.confirm("确定要一键删除吗？不可逆！", {skin: 'layui-layer-lan', icon: 2, title: '提示', anim: 6}, function () {
+            //         $.ajax({
+            //             url:'/web/act/oneDel',
+            //             success:function (res) {
+            //                 layer.alert(res.msg);
+            //                 table.reload('reloadId')
+            //             }
+            //         })
+            //     });
+            //     return false;
+            // })
+
+
+    })
+</script>
+<!--模板-->
+<script type="text/html" id="urlTpl">
+    <a href="{{d.url}}" target="_blank">{{d.url}}</a>
+</script>
+<script type="text/html" id="topTpl">
+    <input type="checkbox" name="isTop" value="{{d.isTop}}" lay-skin="switch" lay-text="是|否" {{ d.isTop== true ? 'checked' : ''}}>
+</script>
+<script type="text/html" id="statusTpl">
+    <input type="checkbox" name="top" value="{{d.status}}" lay-skin="switch" lay-text="上架|下架" {{ d.status== true ? 'checked' : ''}}>
+</script>
+<script type="text/html" id="operationTpl">
+    <!--<a href="javascript:;" title="删除" lay-event="del"><i class="layui-icon">&#xe640;</i></a>-->
+    <a href="javascript:;" class="layui-btn layui-btn-xs" lay-event="edit">查看</a>
+    <a href="javascript:;" class="layui-btn layui-btn-xs" lay-event="add">快速新建</a>
+    <!--<a href="javascript:;" class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>-->
+</script>
+</body>
+</html>

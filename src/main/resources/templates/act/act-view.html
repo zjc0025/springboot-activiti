@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>流程图查看</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_693759_wytlyqhtdtj1nhfr.css">
+    <link rel="stylesheet" href="/static/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="/static/css/scroll-bar.css">
+    <link rel="stylesheet" href="/static/css/sub-page.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_693759_wytlyqhtdtj1nhfr.css">
+    <link rel="stylesheet" href="/static/lib/nprogress/nprogress.css">
+</head>
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+    }
+
+    .header input[type=text] {
+        width: 500px;
+        max-width: 100%;
+    }
+
+    .console textarea {
+        width: 100%;
+        min-height: 80px;
+        border: none;
+        padding: 0;
+    }
+
+    .canvas {
+        border: solid 1px black;
+    }
+</style>
+<body>
+<div class="ok-body">
+    <!--面包屑导航区域-->
+    <div class="ok-body-breadcrumb">
+            <span class="layui-breadcrumb">
+				<a><cite>流程图查看</cite></a>
+            </span>
+        <a class="layui-btn layui-btn-sm" href="javascript:location.replace(location.href);" title="刷新">
+            <i class="layui-icon layui-icon-refresh"></i>
+        </a>
+    </div>
+
+    <div class="canvas">
+        <div id="js-canvas"></div>
+    </div>
+
+    <div class="console">
+        <h3>Console</h3>
+        <textarea id="js-console"></textarea>
+    </div>
+</div>
+<!--js逻辑-->
+<script src="/static/lib/layui/layui.js"></script>
+<script src="/static/lib/nprogress/nprogress.js"></script>
+<!-- viewer -->
+<!--<script src="/static/js/act.js"></script>-->
+<!--&lt;!&ndash; jquery (required for example only) &ndash;&gt;-->
+<!--<script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>-->
+
+<!-- viewer -->
+<script src="https://unpkg.com/bpmn-js@6.0.0/dist/bpmn-viewer.development.js"></script>
+
+<!-- jquery (required for example only) -->
+<script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
+
+<script>
+    var viewer = new BpmnJS({
+        container: $('#js-canvas'),
+        height: 600
+    });
+
+    function log(str) {
+        var console = $('#js-console');
+        console.val(console.val() + str + '\n');
+    }
+
+    function openFromUrl(url) {
+
+        log('attempting to open <' + url + '>');
+
+        $.ajax(url, { dataType : 'text' }).done(function(xml) {
+
+            viewer.importXML(xml, function(err) {
+
+                if (err) {
+                    log('error: ' + err.message);
+                    console.error(err);
+                } else {
+                    viewer.get('canvas').zoom('fit-viewport');
+                    log('success');
+                }
+            });
+        });
+    }
+
+    openFromUrl("/process/supp.bpmn")
+    // openFromUrl("D:\\process/end-el4.bpmn")
+    // $('#js-open').click(function() {
+    //     var url = $('#js-url').val();
+    //     openFromUrl(url);
+    // });
+
+
+    ///// auto open ?url=diagram-url ///////////////////////
+
+    // (function() {
+    //     var str = window.location.search;
+    //     var match = /(?:\&|\?)url=([^&]+)/.exec(str);
+    //
+    //     if (match) {
+    //         var url = decodeURIComponent(match[1]);
+    //         $('#js-url').val(url);
+    //         openFromUrl(url);
+    //     }
+    // })();
+
+</script>
+</body>
+</html>

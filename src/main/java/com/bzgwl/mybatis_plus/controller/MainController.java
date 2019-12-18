@@ -1,5 +1,6 @@
 package com.bzgwl.mybatis_plus.controller;
 
+import com.bzgwl.mybatis_plus.sys.entity.User;
 import com.bzgwl.mybatis_plus.utils.JsonResponse;
 import com.sun.deploy.net.HttpResponse;
 import org.apache.shiro.SecurityUtils;
@@ -10,6 +11,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -100,5 +103,16 @@ public class MainController {
     @RequestMapping("/article")
     public String article(){
         return "article/article";
+    }
+
+    @RequestMapping("getLoginUserName")
+    @ResponseBody
+    public JsonResponse getLoginUserName(){
+        User user = (User)SecurityUtils.getSubject().getPrincipal();
+        JsonResponse j = new JsonResponse();
+        List<String> list = new ArrayList<>();
+        list.add(user.getName());
+        j.setData(list);
+        return j;
     }
 }

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>文章列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/static/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="/static/css/scroll-bar.css">
+    <link rel="stylesheet" href="/static/css/sub-page.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_693759_wytlyqhtdtj1nhfr.css">
+    <link rel="stylesheet" href="/static/lib/nprogress/nprogress.css">
+</head>
+<body>
+<div class="ok-body">
+
+    <form id="form1" class="layui-form">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">姓名</label>
+                <div class="layui-input-inline">
+                    <input  name="username" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">请假类型</label>
+                <div class="layui-input-inline">
+                    <select name="types" lay-filter="types">
+                        <option value=""></option>
+                        <option value="事假">事假</option>
+                        <option value="病假">病假</option>
+                        <option value="调休">调休</option>
+                        <option value="婚庆">婚庆</option>
+                        <option value="其他">其他</option>
+                    </select>
+                </div>
+            </div>
+
+            <!--<div class="layui-inline">-->
+                <!--<label class="layui-form-label">请假类型</label>-->
+                <!--<div class="layui-input-inline">-->
+                    <!--<select name="modules" lay-verify="required" lay-search="">-->
+                        <!--<option value="">直接选择或搜索选择</option>-->
+                        <!--<option value="1">layer</option>-->
+                        <!--<option value="2">form</option>-->
+                        <!--<option value="19">switch</option>-->
+                        <!--<option value="20">radio</option>-->
+                    <!--</select>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">请假天数</label>
+                <div class="layui-input-inline">
+                    <input type="tel" name="days" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">请假描述</label>
+            <div class="layui-input-block">
+                <textarea placeholder="请输入内容" class="layui-textarea" name="contents"></textarea>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button type="submit" class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+<!--js逻辑-->
+<script src="/static/lib/layui/layui.js"></script>
+<script src="/static/lib/nprogress/nprogress.js"></script>
+<script th:inline="none">
+
+    var processDefId;
+
+    function getData(data){
+        console.log(data)
+        processDefId =data
+    }
+    layui.use(['element', 'table', 'form', 'jquery', 'laydate','upload','layer'], function () {
+        let table = layui.table,
+         form = layui.form,
+         $ = layui.jquery,
+         upload = layui.upload,
+         layer = layui.layer;
+
+
+        //监听提交
+        form.on('submit(demo1)', function(data){
+            let datas = data.field
+
+            console.log(processDefId['key'])
+            console.log(datas['username'])
+            datas['key']=processDefId['key']
+            // layer.alert(datas, {
+            //     title: '最终的提交信息'
+            // })
+            $.ajax({
+                url:'../../web/act/addNewApply',
+                type:'post',
+                data:datas,
+                success:function(res) {
+                    if(res.code==1){
+                        layer.alert(res.msg,{icon: 2,});
+                    }else{
+                        layer.alert(res.msg,{icon: 1,});
+
+                    }
+                }
+            })
+
+            return false;
+        });
+
+    })
+</script>
+<!--模板-->
+<script type="text/html" id="urlTpl">
+    <a href="{{d.url}}" target="_blank">{{d.url}}</a>
+</script>
+<script type="text/html" id="topTpl">
+    <input type="checkbox" name="isTop" value="{{d.isTop}}" lay-skin="switch" lay-text="是|否" {{ d.isTop== true ? 'checked' : ''}}>
+</script>
+<script type="text/html" id="statusTpl">
+    <input type="checkbox" name="top" value="{{d.status}}" lay-skin="switch" lay-text="上架|下架" {{ d.status== true ? 'checked' : ''}}>
+</script>
+<script type="text/html" id="operationTpl">
+    <!--<a href="javascript:;" title="编辑" lay-event="edit"><i class="layui-icon ">&#xe642;</i></a>-->
+    <!--<a href="javascript:;" title="删除" lay-event="del"><i class="layui-icon">&#xe640;</i></a>-->
+    <a href="javascript:;" class="layui-btn layui-btn-xs" lay-event="edit">查看</a>
+    <!--<a href="javascript:;" class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>-->
+</script>
+</body>
+</html>

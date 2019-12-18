@@ -63,7 +63,7 @@
          <li class="no-line layui-nav-item">
             <a href="javascript:;">
                <img src="/static/images/head.png" class="layui-nav-img">
-               Professor_Kong
+               <span class="userName">Professor_Kong</span>
             </a>
             <dl id="userInfo" class="layui-nav-child">
                <dd><a lay-id="u-1" href="javascript:;" data-url="/sys/user/mainIndex">个人中心<span
@@ -188,6 +188,26 @@
       "hash": "039da28f5581f4bcb5c799fb4cdfb673"
    });
    tpwidget("show");
+
+
+   layui.use(['element', 'table'], function () {
+      let  $ = layui.jquery;
+
+
+      function getName() {
+         $.ajax({
+            url:'getLoginUserName',
+            type:'get',
+            success:function (res) {
+               $('.userName').html(res.data[0])
+            }
+         })
+
+      }
+      getName();
+   })
+
+
 </script>
 </body>
 </html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>流程图查看</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/static/lib/layui/css/layui.css">
+    <!--js逻辑-->
+    <script src="/static/lib/layui/layui.js"></script>
+    <script src="/static/lib/nprogress/nprogress.js"></script>
+</head>
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+    }
+
+    .header input[type=text] {
+        width: 500px;
+        max-width: 100%;
+    }
+
+    .console textarea {
+        width: 100%;
+        min-height: 80px;
+        border: none;
+        padding: 0;
+    }
+
+    .canvas {
+        border: solid 1px black;
+    }
+</style>
+<body>
+<div class="ok-body">
+    <input id="instanceId"  hidden th:value="${instanceId}">
+    <!--面包屑导航区域-->
+    <div class="ok-body-breadcrumb">
+            <span class="layui-breadcrumb">
+				<a><cite>流程图查看</cite></a>
+            </span>
+        <!--<a class="layui-btn layui-btn-sm" style="float: right" href="javascript:location.replace(location.href);" title="刷新">-->
+            <!--<i class="layui-icon layui-icon-refresh"></i>-->
+        <!--</a>-->
+    </div>
+
+    <div class="canvas">
+        <div id="js-canvas"></div>
+    </div>
+
+    <div class="console">
+        <h3>Console</h3>
+        <textarea id="js-console"></textarea>
+    </div>
+</div>
+<!-- required modeler styles -->
+<link rel="stylesheet" href="/static/actjs/diagram-js.css">
+<link rel="stylesheet" href="/static/actjs/bpmn.css">
+
+<!-- modeler distro -->
+<script src="/static/actjs/bpmn-modeler.js"></script>
+
+<!-- jquery (required for example only) -->
+<script src="/static/actjs/jquery.js"></script>
+
+<script>
+    var viewer = new BpmnJS({
+        container: $('#js-canvas'),
+        height: 700
+    });
+
+    function log(str) {
+        var console = $('#js-console');
+        console.val(console.val() + str + '\n');
+    }
+
+    function openFromUrl(url) {
+
+        log('attempting to open <' + url + '>');
+        $.ajax(url, { dataType : 'text' }).done(function(xml) {
+
+
+            const instanceId = $("#instanceId").val()
+
+            viewer.importXML(xml, function(err) {
+
+                if (err) {
+                    log('error: ' + err.message);
+                    console.error(err);
+                } else {
+                    viewer.get('canvas').zoom('fit-viewport');
+                    log('success');
+                }
+
+
+
+                let overlays = viewer.get('overlays'),
+                    canvas = viewer.get('canvas'),
+                    elementRegistry = viewer.get('elementRegistry'),
+                    modeling = viewer.get('modeling');
+
+                $.ajax({
+                    url:'getApply_status',
+                    data:{'instanceId':instanceId},
+                    success:function (res) {
+                       const  highPoint= res.highPoint;
+                       const  highLine = res.highLine;
+                       const waitingToDo = res.waitingToDo;
+
+
+                       //走过的线设置高亮
+                        highLine.forEach(function (e) {
+                            if(e!=null){
+                                const highLineEle =  elementRegistry.get(e)
+                                modeling.setColor(highLineEle, {
+                                    stroke: 'green',
+                                });
+                            }
+
+                        })
+
+                        //节点设置高亮
+                        highPoint.forEach(function (e) {
+                            const highPointEle = elementRegistry.get(e);
+                            // highPoints.push(highLineEle)
+                            modeling.setColor(highPointEle, {
+                                stroke: 'green',
+                                fill: 'rgba(0, 80, 0, 0.4)'
+                            });
+                        })
+
+                        waitingToDo.forEach(function (e) {
+                            const waitingEle = elementRegistry.get(e);
+                            modeling.setColor(waitingEle, {
+                                stroke: 'green',
+                                fill: 'rgba(255,255,0, 0.8)',
+                            });
+                        })
+
+                    }
+                })
+            });
+        });
+    }
+
+    let url = '/process/supp.bpmn';
+    openFromUrl(url);
+
+</script>
+</body>
+</html>

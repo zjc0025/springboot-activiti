@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>流程图查看</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/static/lib/layui/css/layui.css">
+</head>
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+    }
+
+    .header input[type=text] {
+        width: 500px;
+        max-width: 100%;
+    }
+
+    .console textarea {
+        width: 100%;
+        min-height: 80px;
+        border: none;
+        padding: 0;
+    }
+
+    .canvas {
+        border: solid 1px black;
+    }
+</style>
+<body>
+<div class="ok-body">
+    <!--面包屑导航区域-->
+    <div class="ok-body-breadcrumb">
+            <span class="layui-breadcrumb">
+				<a><cite>流程图查看</cite></a>
+            </span>
+        <a class="layui-btn layui-btn-sm" href="javascript:location.replace(location.href);" title="刷新">
+            <i class="layui-icon layui-icon-refresh"></i>
+        </a>
+    </div>
+
+    <div class="canvas">
+        <div id="js-canvas"></div>
+    </div>
+
+    <div class="console">
+        <h3>Console</h3>
+        <textarea id="js-console"></textarea>
+    </div>
+</div>
+<!--js逻辑-->
+<script src="/static/lib/layui/layui.js"></script>
+<script src="/static/lib/nprogress/nprogress.js"></script>
+<!-- viewer -->
+<!--<script src="/static/js/act.js"></script>-->
+<!--&lt;!&ndash; jquery (required for example only) &ndash;&gt;-->
+<!--<script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>-->
+
+<!-- viewer -->
+<!--<script src="https://unpkg.com/bpmn-js@6.0.0/dist/bpmn-viewer.development.js"></script>-->
+
+<!--&lt;!&ndash; jquery (required for example only) &ndash;&gt;-->
+<!--<script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>-->
+
+
+
+<!-- required modeler styles -->
+<link rel="stylesheet" href="https://unpkg.com/bpmn-js@6.0.4/dist/assets/diagram-js.css">
+<link rel="stylesheet" href="https://unpkg.com/bpmn-js@6.0.4/dist/assets/bpmn-font/css/bpmn.css">
+
+<!-- modeler distro -->
+<script src="/static/actjs/bpmn-modeler.js"></script>
+
+<!-- jquery (required for example only) -->
+<script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
+
+<script>
+    let viewer = new BpmnJS({
+        container: $('#js-canvas'),
+        height: 800
+    });
+
+    // function log(str) {
+    //     let console = $('#js-console');
+    //     console.val(console.val() + str + '\n');
+    // }
+
+    function showDiagram(diagramXML) {
+
+        viewer.importXML(diagramXML, function() {
+
+            let elementRegistry = viewer.get('elementRegistry'),
+                modeling = viewer.get('modeling');
+
+            // Option 2: Color via BPMN 2.0 Extension
+            let elementToColor = elementRegistry.get('UserTask_0cexsmw');
+
+            modeling.setColor([ elementToColor ], {
+                stroke: 'green',
+                fill: 'rgba(0, 80, 0, 0.4)'
+            });
+
+            // Option 3: Color via Marker + CSS Styling
+            // canvas.addMarker('OrderReceivedEvent', 'highlight');
+        });
+    }
+
+    // openFromUrl("/process/end-el-reject.bpmn")
+    $.get('/process/end-el-reject.bpmn', showDiagram, 'text');
+
+
+</script>
+</body>
+</html>
