@@ -11,7 +11,7 @@
  Target Server Version : 50528
  File Encoding         : 65001
 
- Date: 18/12/2019 13:24:01
+ Date: 24/12/2019 16:04:29
 */
 
 SET NAMES utf8mb4;
@@ -107,6 +107,19 @@ CREATE TABLE `act_hi_actinst`  (
 -- ----------------------------
 -- Records of act_hi_actinst
 -- ----------------------------
+INSERT INTO `act_hi_actinst` VALUES ('1cf5b783-215a-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b782-215a-11ea-b83e-6214b3baacc3', 'StartEvent_1', NULL, NULL, '开始节点', 'startEvent', NULL, '2019-12-18 13:49:10', '2019-12-18 13:49:10', 0, NULL, '');
+INSERT INTO `act_hi_actinst` VALUES ('1cf5b784-215a-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b782-215a-11ea-b83e-6214b3baacc3', 'ExclusiveGateway_173hwsm', NULL, NULL, '排他网关', 'exclusiveGateway', NULL, '2019-12-18 13:49:10', '2019-12-18 13:49:10', 1, NULL, '');
+INSERT INTO `act_hi_actinst` VALUES ('1cf5de95-215a-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b782-215a-11ea-b83e-6214b3baacc3', 'UserTask_0vx7s25', '1cf5de96-215a-11ea-b83e-6214b3baacc3', NULL, '审批【主任】', 'userTask', 'lizr', '2019-12-18 13:49:10', '2019-12-18 13:49:37', 27153, NULL, '');
+INSERT INTO `act_hi_actinst` VALUES ('2bd8c094-215a-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', 'ExclusiveGateway_0ogqnc4', NULL, NULL, '并行网关2号', 'parallelGateway', NULL, '2019-12-18 13:49:35', '2019-12-18 13:49:35', 1, NULL, '');
+INSERT INTO `act_hi_actinst` VALUES ('2bda2025-215a-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', 'UserTask_07bqdfg', '2bda2026-215a-11ea-b83e-6214b3baacc3', NULL, '校长【审批】', 'userTask', 'admin', '2019-12-18 13:49:35', '2019-12-18 13:49:51', 16070, NULL, '');
+INSERT INTO `act_hi_actinst` VALUES ('2cdac759-215a-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b782-215a-11ea-b83e-6214b3baacc3', 'Task_1idf8u6', '2cdac75a-215a-11ea-b83e-6214b3baacc3', NULL, '校长【审批】', 'userTask', 'admin', '2019-12-18 13:49:37', '2019-12-18 13:49:49', 12086, NULL, '');
+INSERT INTO `act_hi_actinst` VALUES ('33f79c39-215a-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b782-215a-11ea-b83e-6214b3baacc3', 'EndEvent_0wpca53', NULL, NULL, '终止节点', 'endEvent', NULL, '2019-12-18 13:49:49', '2019-12-18 13:49:49', 0, NULL, '');
+INSERT INTO `act_hi_actinst` VALUES ('35265841-215a-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', 'EndEvent_0wpca53', NULL, NULL, '终止节点', 'endEvent', NULL, '2019-12-18 13:49:51', '2019-12-18 13:49:51', 0, NULL, '');
+INSERT INTO `act_hi_actinst` VALUES ('46709d4b-215a-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', 'StartEvent_1', NULL, NULL, '开始节点', 'startEvent', NULL, '2019-12-18 13:50:20', '2019-12-18 13:50:20', 0, NULL, '');
+INSERT INTO `act_hi_actinst` VALUES ('46709d4c-215a-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', 'ExclusiveGateway_173hwsm', NULL, NULL, '排他网关', 'exclusiveGateway', NULL, '2019-12-18 13:50:20', '2019-12-18 13:50:20', 1, NULL, '');
+INSERT INTO `act_hi_actinst` VALUES ('4670c45d-215a-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', 'UserTask_0vx7s25', '4670c45e-215a-11ea-b83e-6214b3baacc3', NULL, '审批【主任】', 'userTask', 'lizr', '2019-12-18 13:50:20', '2019-12-18 13:50:34', 14626, NULL, '');
+INSERT INTO `act_hi_actinst` VALUES ('4f1c769b-215a-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', 'Task_1idf8u6', '4f1c769c-215a-11ea-b83e-6214b3baacc3', NULL, '校长【审批】', 'userTask', 'admin', '2019-12-18 13:50:34', '2019-12-18 13:50:48', 14493, NULL, '');
+INSERT INTO `act_hi_actinst` VALUES ('5760665b-215a-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', 'UserTask_0vx7s25', '57608d6c-215a-11ea-b83e-6214b3baacc3', NULL, '审批【主任】', 'userTask', 'lizr', '2019-12-18 13:50:48', NULL, NULL, NULL, '');
 INSERT INTO `act_hi_actinst` VALUES ('6a7acc02-213f-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'b9b6b87f-213e-11ea-b83e-6214b3baacc3', 'b9b88d49-213e-11ea-b83e-6214b3baacc3', 'Task_1idf8u6', '6a7acc03-213f-11ea-b83e-6214b3baacc3', NULL, '校长【审批】', 'userTask', 'admin', '2019-12-18 10:38:04', '2019-12-18 10:38:56', 52406, NULL, '');
 INSERT INTO `act_hi_actinst` VALUES ('89a37b54-213f-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'b9b6b87f-213e-11ea-b83e-6214b3baacc3', 'b9b88d49-213e-11ea-b83e-6214b3baacc3', 'EndEvent_0wpca53', NULL, NULL, '终止节点', 'endEvent', NULL, '2019-12-18 10:38:56', '2019-12-18 10:38:56', 0, NULL, '');
 INSERT INTO `act_hi_actinst` VALUES ('b2c88974-20a9-11ea-9656-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', 'b2c86263-20a9-11ea-9656-6214b3baacc3', 'StartEvent_1', NULL, NULL, '开始节点', 'startEvent', NULL, '2019-12-17 16:46:20', '2019-12-17 16:46:20', 0, NULL, '');
@@ -118,6 +131,12 @@ INSERT INTO `act_hi_actinst` VALUES ('b9b977aa-213e-11ea-b83e-6214b3baacc3', 'Pr
 INSERT INTO `act_hi_actinst` VALUES ('b9bafe4b-213e-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'b9b6b87f-213e-11ea-b83e-6214b3baacc3', 'b9b88d49-213e-11ea-b83e-6214b3baacc3', 'ExclusiveGateway_173hwsm', NULL, NULL, '排他网关', 'exclusiveGateway', NULL, '2019-12-18 10:33:07', '2019-12-18 10:33:07', 35, NULL, '');
 INSERT INTO `act_hi_actinst` VALUES ('b9c0557c-213e-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'b9b6b87f-213e-11ea-b83e-6214b3baacc3', 'b9b88d49-213e-11ea-b83e-6214b3baacc3', 'UserTask_0vx7s25', 'b9c0a39d-213e-11ea-b83e-6214b3baacc3', NULL, '审批【主任】', 'userTask', 'lizr', '2019-12-18 10:33:07', '2019-12-18 10:34:10', 63888, NULL, '');
 INSERT INTO `act_hi_actinst` VALUES ('c8784b9f-20a9-11ea-9656-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', 'b2c8b087-20a9-11ea-9656-6214b3baacc3', 'ExclusiveGateway_0ogqnc4', NULL, NULL, '并行网关2号', 'parallelGateway', NULL, '2019-12-17 16:46:57', '2019-12-17 16:46:57', 1, NULL, '');
+INSERT INTO `act_hi_actinst` VALUES ('c97d28be-2159-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d28bd-2159-11ea-b83e-6214b3baacc3', 'StartEvent_1', NULL, NULL, '开始节点', 'startEvent', NULL, '2019-12-18 13:46:50', '2019-12-18 13:46:50', 0, NULL, '');
+INSERT INTO `act_hi_actinst` VALUES ('c97d28bf-2159-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d28bd-2159-11ea-b83e-6214b3baacc3', 'ExclusiveGateway_173hwsm', NULL, NULL, '排他网关', 'exclusiveGateway', NULL, '2019-12-18 13:46:50', '2019-12-18 13:46:50', 0, NULL, '');
+INSERT INTO `act_hi_actinst` VALUES ('c97d28c0-2159-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d28bd-2159-11ea-b83e-6214b3baacc3', 'ExclusiveGateway_16xhotd', NULL, NULL, '并行网关1号', 'parallelGateway', NULL, '2019-12-18 13:46:50', '2019-12-18 13:46:50', 1, NULL, '');
+INSERT INTO `act_hi_actinst` VALUES ('c97f72b8-2159-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d28bd-2159-11ea-b83e-6214b3baacc3', 'Task_1ckj7m2', 'c97f72b9-2159-11ea-b83e-6214b3baacc3', NULL, '审批【老师】', 'userTask', 'wangls', '2019-12-18 13:46:50', '2019-12-18 13:47:08', 18942, NULL, '');
+INSERT INTO `act_hi_actinst` VALUES ('c97fbfe5-2159-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', 'UserTask_0cexsmw', 'c97fbfe6-2159-11ea-b83e-6214b3baacc3', NULL, '审批【主任】', 'userTask', 'lizr', '2019-12-18 13:46:50', '2019-12-18 13:49:35', 165461, NULL, '');
+INSERT INTO `act_hi_actinst` VALUES ('d483ba09-2159-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d28bd-2159-11ea-b83e-6214b3baacc3', 'ExclusiveGateway_0ogqnc4', NULL, NULL, '并行网关2号', 'parallelGateway', NULL, '2019-12-18 13:47:08', '2019-12-18 13:47:08', 0, NULL, '');
 INSERT INTO `act_hi_actinst` VALUES ('d6bb6b26-20a9-11ea-9656-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', 'b2c86263-20a9-11ea-9656-6214b3baacc3', 'ExclusiveGateway_0ogqnc4', NULL, NULL, '并行网关2号', 'parallelGateway', NULL, '2019-12-17 16:47:21', '2019-12-17 16:47:21', 2, NULL, '');
 INSERT INTO `act_hi_actinst` VALUES ('d6bc7c97-20a9-11ea-9656-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', 'b2c86263-20a9-11ea-9656-6214b3baacc3', 'UserTask_07bqdfg', 'd6bc7c98-20a9-11ea-9656-6214b3baacc3', NULL, '校长【审批】', 'userTask', 'admin', '2019-12-17 16:47:21', '2019-12-17 16:47:47', 26490, NULL, '');
 INSERT INTO `act_hi_actinst` VALUES ('df74bd2d-213e-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'b9b6b87f-213e-11ea-b83e-6214b3baacc3', 'b9b88d49-213e-11ea-b83e-6214b3baacc3', 'Task_1idf8u6', 'df74bd2e-213e-11ea-b83e-6214b3baacc3', NULL, '校长【审批】', 'userTask', 'admin', '2019-12-18 10:34:10', '2019-12-18 10:34:24', 14849, NULL, '');
@@ -191,6 +210,67 @@ CREATE TABLE `act_hi_detail`  (
 -- ----------------------------
 -- Records of act_hi_detail
 -- ----------------------------
+INSERT INTO `act_hi_detail` VALUES ('1cf5b77d-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', NULL, NULL, 'types', 'string', 0, '2019-12-18 13:49:10', NULL, NULL, NULL, '调休', NULL);
+INSERT INTO `act_hi_detail` VALUES ('1cf5b77f-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', NULL, NULL, 'days', 'integer', 0, '2019-12-18 13:49:10', NULL, NULL, 34, '34', NULL);
+INSERT INTO `act_hi_detail` VALUES ('1cf5b781-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', NULL, NULL, 'username', 'string', 0, '2019-12-18 13:49:10', NULL, NULL, NULL, 'xiaoming', NULL);
+INSERT INTO `act_hi_detail` VALUES ('1cf5de98-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b782-215a-11ea-b83e-6214b3baacc3', '1cf5de96-215a-11ea-b83e-6214b3baacc3', NULL, 'types', 'string', 0, '2019-12-18 13:49:10', NULL, NULL, NULL, '调休', NULL);
+INSERT INTO `act_hi_detail` VALUES ('1cf5de9a-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b782-215a-11ea-b83e-6214b3baacc3', '1cf5de96-215a-11ea-b83e-6214b3baacc3', NULL, 'days', 'integer', 0, '2019-12-18 13:49:10', NULL, NULL, 34, '34', NULL);
+INSERT INTO `act_hi_detail` VALUES ('1cf5de9c-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b782-215a-11ea-b83e-6214b3baacc3', '1cf5de96-215a-11ea-b83e-6214b3baacc3', NULL, 'username', 'string', 0, '2019-12-18 13:49:10', NULL, NULL, NULL, 'xiaoming', NULL);
+INSERT INTO `act_hi_detail` VALUES ('2bd6016e-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, 'c97fbfe5-2159-11ea-b83e-6214b3baacc3', 'msg', 'string', 1, '2019-12-18 13:49:35', NULL, NULL, NULL, 'yes', NULL);
+INSERT INTO `act_hi_detail` VALUES ('2bd7af1f-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, NULL, 'types', 'string', 1, '2019-12-18 13:49:35', NULL, NULL, NULL, '调休', NULL);
+INSERT INTO `act_hi_detail` VALUES ('2bd7d630-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, NULL, 'teacher', 'string', 1, '2019-12-18 13:49:35', NULL, NULL, NULL, 'wangls', NULL);
+INSERT INTO `act_hi_detail` VALUES ('2bd7fd41-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, NULL, 'director', 'string', 1, '2019-12-18 13:49:35', NULL, NULL, NULL, 'lizr', NULL);
+INSERT INTO `act_hi_detail` VALUES ('2bd7fd42-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, NULL, 'days', 'integer', 1, '2019-12-18 13:49:35', NULL, NULL, 23, '23', NULL);
+INSERT INTO `act_hi_detail` VALUES ('2bd82453-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, NULL, 'username', 'string', 1, '2019-12-18 13:49:35', NULL, NULL, NULL, 'xiaoming', NULL);
+INSERT INTO `act_hi_detail` VALUES ('2bda4738-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', '2bda2026-215a-11ea-b83e-6214b3baacc3', NULL, 'msg', 'string', 0, '2019-12-18 13:49:35', NULL, NULL, NULL, 'yes', NULL);
+INSERT INTO `act_hi_detail` VALUES ('2bda473a-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', '2bda2026-215a-11ea-b83e-6214b3baacc3', NULL, 'types', 'string', 0, '2019-12-18 13:49:35', NULL, NULL, NULL, '调休', NULL);
+INSERT INTO `act_hi_detail` VALUES ('2bda473c-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', '2bda2026-215a-11ea-b83e-6214b3baacc3', NULL, 'teacher', 'string', 0, '2019-12-18 13:49:35', NULL, NULL, NULL, 'wangls', NULL);
+INSERT INTO `act_hi_detail` VALUES ('2bda473e-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', '2bda2026-215a-11ea-b83e-6214b3baacc3', NULL, 'director', 'string', 0, '2019-12-18 13:49:35', NULL, NULL, NULL, 'lizr', NULL);
+INSERT INTO `act_hi_detail` VALUES ('2bda4740-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', '2bda2026-215a-11ea-b83e-6214b3baacc3', NULL, 'days', 'integer', 0, '2019-12-18 13:49:35', NULL, NULL, 23, '23', NULL);
+INSERT INTO `act_hi_detail` VALUES ('2bda4742-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', '2bda2026-215a-11ea-b83e-6214b3baacc3', NULL, 'username', 'string', 0, '2019-12-18 13:49:35', NULL, NULL, NULL, 'xiaoming', NULL);
+INSERT INTO `act_hi_detail` VALUES ('2cd71dd5-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', NULL, '1cf5de95-215a-11ea-b83e-6214b3baacc3', 'msg', 'string', 0, '2019-12-18 13:49:37', NULL, NULL, NULL, 'yes', NULL);
+INSERT INTO `act_hi_detail` VALUES ('2cd9b5e6-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', NULL, NULL, 'types', 'string', 1, '2019-12-18 13:49:37', NULL, NULL, NULL, '调休', NULL);
+INSERT INTO `act_hi_detail` VALUES ('2cd9dcf7-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', NULL, NULL, 'days', 'integer', 1, '2019-12-18 13:49:37', NULL, NULL, 34, '34', NULL);
+INSERT INTO `act_hi_detail` VALUES ('2cda0408-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', NULL, NULL, 'username', 'string', 1, '2019-12-18 13:49:37', NULL, NULL, NULL, 'xiaoming', NULL);
+INSERT INTO `act_hi_detail` VALUES ('2cdaee6c-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b782-215a-11ea-b83e-6214b3baacc3', '2cdac75a-215a-11ea-b83e-6214b3baacc3', NULL, 'msg', 'string', 0, '2019-12-18 13:49:37', NULL, NULL, NULL, 'yes', NULL);
+INSERT INTO `act_hi_detail` VALUES ('2cdaee6e-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b782-215a-11ea-b83e-6214b3baacc3', '2cdac75a-215a-11ea-b83e-6214b3baacc3', NULL, 'types', 'string', 0, '2019-12-18 13:49:37', NULL, NULL, NULL, '调休', NULL);
+INSERT INTO `act_hi_detail` VALUES ('2cdaee70-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b782-215a-11ea-b83e-6214b3baacc3', '2cdac75a-215a-11ea-b83e-6214b3baacc3', NULL, 'days', 'integer', 0, '2019-12-18 13:49:37', NULL, NULL, 34, '34', NULL);
+INSERT INTO `act_hi_detail` VALUES ('2cdaee72-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b782-215a-11ea-b83e-6214b3baacc3', '2cdac75a-215a-11ea-b83e-6214b3baacc3', NULL, 'username', 'string', 0, '2019-12-18 13:49:37', NULL, NULL, NULL, 'xiaoming', NULL);
+INSERT INTO `act_hi_detail` VALUES ('33f4dd14-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b782-215a-11ea-b83e-6214b3baacc3', '2cdac75a-215a-11ea-b83e-6214b3baacc3', NULL, 'msg', 'string', 1, '2019-12-18 13:49:49', NULL, NULL, NULL, 'yes', NULL);
+INSERT INTO `act_hi_detail` VALUES ('33f68ac5-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', NULL, NULL, 'msg', 'string', 1, '2019-12-18 13:49:49', NULL, NULL, NULL, 'yes', NULL);
+INSERT INTO `act_hi_detail` VALUES ('33f6d8e6-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', NULL, NULL, 'types', 'string', 1, '2019-12-18 13:49:49', NULL, NULL, NULL, '调休', NULL);
+INSERT INTO `act_hi_detail` VALUES ('33f6d8e7-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', NULL, NULL, 'days', 'integer', 1, '2019-12-18 13:49:49', NULL, NULL, 34, '34', NULL);
+INSERT INTO `act_hi_detail` VALUES ('33f6fff8-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', NULL, NULL, 'username', 'string', 1, '2019-12-18 13:49:49', NULL, NULL, NULL, 'xiaoming', NULL);
+INSERT INTO `act_hi_detail` VALUES ('3522d5ca-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', '2bda2026-215a-11ea-b83e-6214b3baacc3', NULL, 'msg', 'string', 1, '2019-12-18 13:49:51', NULL, NULL, NULL, 'yes', NULL);
+INSERT INTO `act_hi_detail` VALUES ('352546cb-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, NULL, 'msg', 'string', 1, '2019-12-18 13:49:51', NULL, NULL, NULL, 'yes', NULL);
+INSERT INTO `act_hi_detail` VALUES ('35256ddc-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, NULL, 'types', 'string', 1, '2019-12-18 13:49:51', NULL, NULL, NULL, '调休', NULL);
+INSERT INTO `act_hi_detail` VALUES ('35256ddd-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, NULL, 'teacher', 'string', 1, '2019-12-18 13:49:51', NULL, NULL, NULL, 'wangls', NULL);
+INSERT INTO `act_hi_detail` VALUES ('352594ee-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, NULL, 'director', 'string', 1, '2019-12-18 13:49:51', NULL, NULL, NULL, 'lizr', NULL);
+INSERT INTO `act_hi_detail` VALUES ('352594ef-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, NULL, 'days', 'integer', 1, '2019-12-18 13:49:51', NULL, NULL, 23, '23', NULL);
+INSERT INTO `act_hi_detail` VALUES ('3525bc00-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, NULL, 'username', 'string', 1, '2019-12-18 13:49:51', NULL, NULL, NULL, 'xiaoming', NULL);
+INSERT INTO `act_hi_detail` VALUES ('46709d45-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', NULL, NULL, 'types', 'string', 0, '2019-12-18 13:50:20', NULL, NULL, NULL, '调休', NULL);
+INSERT INTO `act_hi_detail` VALUES ('46709d47-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', NULL, NULL, 'days', 'integer', 0, '2019-12-18 13:50:20', NULL, NULL, 32, '32', NULL);
+INSERT INTO `act_hi_detail` VALUES ('46709d49-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', NULL, NULL, 'username', 'string', 0, '2019-12-18 13:50:20', NULL, NULL, NULL, 'xiaoming', NULL);
+INSERT INTO `act_hi_detail` VALUES ('4670c460-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '4670c45e-215a-11ea-b83e-6214b3baacc3', NULL, 'types', 'string', 0, '2019-12-18 13:50:20', NULL, NULL, NULL, '调休', NULL);
+INSERT INTO `act_hi_detail` VALUES ('4670c462-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '4670c45e-215a-11ea-b83e-6214b3baacc3', NULL, 'days', 'integer', 0, '2019-12-18 13:50:20', NULL, NULL, 32, '32', NULL);
+INSERT INTO `act_hi_detail` VALUES ('4670c464-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '4670c45e-215a-11ea-b83e-6214b3baacc3', NULL, 'username', 'string', 0, '2019-12-18 13:50:20', NULL, NULL, NULL, 'xiaoming', NULL);
+INSERT INTO `act_hi_detail` VALUES ('4f18f427-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', NULL, '4670c45d-215a-11ea-b83e-6214b3baacc3', 'msg', 'string', 0, '2019-12-18 13:50:34', NULL, NULL, NULL, 'yes', NULL);
+INSERT INTO `act_hi_detail` VALUES ('4f1bb348-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', NULL, NULL, 'types', 'string', 1, '2019-12-18 13:50:34', NULL, NULL, NULL, '调休', NULL);
+INSERT INTO `act_hi_detail` VALUES ('4f1bda59-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', NULL, NULL, 'days', 'integer', 1, '2019-12-18 13:50:34', NULL, NULL, 32, '32', NULL);
+INSERT INTO `act_hi_detail` VALUES ('4f1bda5a-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', NULL, NULL, 'username', 'string', 1, '2019-12-18 13:50:34', NULL, NULL, NULL, 'xiaoming', NULL);
+INSERT INTO `act_hi_detail` VALUES ('4f1c769e-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '4f1c769c-215a-11ea-b83e-6214b3baacc3', NULL, 'msg', 'string', 0, '2019-12-18 13:50:34', NULL, NULL, NULL, 'yes', NULL);
+INSERT INTO `act_hi_detail` VALUES ('4f1c76a0-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '4f1c769c-215a-11ea-b83e-6214b3baacc3', NULL, 'types', 'string', 0, '2019-12-18 13:50:34', NULL, NULL, NULL, '调休', NULL);
+INSERT INTO `act_hi_detail` VALUES ('4f1c76a2-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '4f1c769c-215a-11ea-b83e-6214b3baacc3', NULL, 'days', 'integer', 0, '2019-12-18 13:50:34', NULL, NULL, 32, '32', NULL);
+INSERT INTO `act_hi_detail` VALUES ('4f1c76a4-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '4f1c769c-215a-11ea-b83e-6214b3baacc3', NULL, 'username', 'string', 0, '2019-12-18 13:50:34', NULL, NULL, NULL, 'xiaoming', NULL);
+INSERT INTO `act_hi_detail` VALUES ('575da736-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '4f1c769c-215a-11ea-b83e-6214b3baacc3', NULL, 'msg', 'string', 1, '2019-12-18 13:50:48', NULL, NULL, NULL, 'no', NULL);
+INSERT INTO `act_hi_detail` VALUES ('575f7bf7-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', NULL, NULL, 'msg', 'string', 1, '2019-12-18 13:50:48', NULL, NULL, NULL, 'no', NULL);
+INSERT INTO `act_hi_detail` VALUES ('575fa308-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', NULL, NULL, 'types', 'string', 1, '2019-12-18 13:50:48', NULL, NULL, NULL, '调休', NULL);
+INSERT INTO `act_hi_detail` VALUES ('575fa309-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', NULL, NULL, 'days', 'integer', 1, '2019-12-18 13:50:48', NULL, NULL, 32, '32', NULL);
+INSERT INTO `act_hi_detail` VALUES ('575fca1a-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', NULL, NULL, 'username', 'string', 1, '2019-12-18 13:50:48', NULL, NULL, NULL, 'xiaoming', NULL);
+INSERT INTO `act_hi_detail` VALUES ('57608d6e-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '57608d6c-215a-11ea-b83e-6214b3baacc3', NULL, 'msg', 'string', 0, '2019-12-18 13:50:48', NULL, NULL, NULL, 'no', NULL);
+INSERT INTO `act_hi_detail` VALUES ('57608d70-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '57608d6c-215a-11ea-b83e-6214b3baacc3', NULL, 'types', 'string', 0, '2019-12-18 13:50:48', NULL, NULL, NULL, '调休', NULL);
+INSERT INTO `act_hi_detail` VALUES ('57608d72-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '57608d6c-215a-11ea-b83e-6214b3baacc3', NULL, 'days', 'integer', 0, '2019-12-18 13:50:48', NULL, NULL, 32, '32', NULL);
+INSERT INTO `act_hi_detail` VALUES ('57608d74-215a-11ea-b83e-6214b3baacc3', 'VariableUpdate', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '57608d6c-215a-11ea-b83e-6214b3baacc3', NULL, 'username', 'string', 0, '2019-12-18 13:50:48', NULL, NULL, NULL, 'xiaoming', NULL);
 INSERT INTO `act_hi_detail` VALUES ('6a75e9fc-213f-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'b9b6b87f-213e-11ea-b83e-6214b3baacc3', 'b9b88d49-213e-11ea-b83e-6214b3baacc3', 'e7c77a01-213e-11ea-b83e-6214b3baacc3', NULL, 'msg', 'string', 1, '2019-12-18 10:38:04', NULL, NULL, NULL, 'yes', NULL);
 INSERT INTO `act_hi_detail` VALUES ('6a78f73d-213f-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'b9b6b87f-213e-11ea-b83e-6214b3baacc3', 'b9b6b87f-213e-11ea-b83e-6214b3baacc3', NULL, NULL, 'msg', 'string', 2, '2019-12-18 10:38:04', NULL, NULL, NULL, 'yes', NULL);
 INSERT INTO `act_hi_detail` VALUES ('6a78f73e-213f-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'b9b6b87f-213e-11ea-b83e-6214b3baacc3', 'b9b6b87f-213e-11ea-b83e-6214b3baacc3', NULL, NULL, 'types', 'string', 1, '2019-12-18 10:38:04', NULL, NULL, NULL, '调休', NULL);
@@ -239,6 +319,29 @@ INSERT INTO `act_hi_detail` VALUES ('c876ec0b-20a9-11ea-9656-6214b3baacc3', 'Var
 INSERT INTO `act_hi_detail` VALUES ('c877131c-20a9-11ea-9656-6214b3baacc3', 'VariableUpdate', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', NULL, NULL, 'director', 'string', 1, '2019-12-17 16:46:57', NULL, NULL, NULL, 'lizr', NULL);
 INSERT INTO `act_hi_detail` VALUES ('c8773a2d-20a9-11ea-9656-6214b3baacc3', 'VariableUpdate', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', NULL, NULL, 'days', 'integer', 1, '2019-12-17 16:46:57', NULL, NULL, 23, '23', NULL);
 INSERT INTO `act_hi_detail` VALUES ('c877613e-20a9-11ea-9656-6214b3baacc3', 'VariableUpdate', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', NULL, NULL, 'username', 'string', 1, '2019-12-17 16:46:57', NULL, NULL, NULL, 'xiaoming', NULL);
+INSERT INTO `act_hi_detail` VALUES ('c97d01a8-2159-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, NULL, 'types', 'string', 0, '2019-12-18 13:46:50', NULL, NULL, NULL, '调休', NULL);
+INSERT INTO `act_hi_detail` VALUES ('c97d28ba-2159-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, NULL, 'days', 'integer', 0, '2019-12-18 13:46:50', NULL, NULL, 23, '23', NULL);
+INSERT INTO `act_hi_detail` VALUES ('c97d28bc-2159-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, NULL, 'username', 'string', 0, '2019-12-18 13:46:50', NULL, NULL, NULL, 'xiaoming', NULL);
+INSERT INTO `act_hi_detail` VALUES ('c97f72b3-2159-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, NULL, 'director', 'string', 0, '2019-12-18 13:46:50', NULL, NULL, NULL, 'lizr', NULL);
+INSERT INTO `act_hi_detail` VALUES ('c97f72b5-2159-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, NULL, 'teacher', 'string', 0, '2019-12-18 13:46:50', NULL, NULL, NULL, 'wangls', NULL);
+INSERT INTO `act_hi_detail` VALUES ('c97f72b6-2159-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, NULL, 'director', 'string', 0, '2019-12-18 13:46:50', NULL, NULL, NULL, 'lizr', NULL);
+INSERT INTO `act_hi_detail` VALUES ('c97f72b7-2159-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, NULL, 'teacher', 'string', 0, '2019-12-18 13:46:50', NULL, NULL, NULL, 'wangls', NULL);
+INSERT INTO `act_hi_detail` VALUES ('c97f99cb-2159-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d28bd-2159-11ea-b83e-6214b3baacc3', 'c97f72b9-2159-11ea-b83e-6214b3baacc3', NULL, 'types', 'string', 0, '2019-12-18 13:46:50', NULL, NULL, NULL, '调休', NULL);
+INSERT INTO `act_hi_detail` VALUES ('c97f99cd-2159-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d28bd-2159-11ea-b83e-6214b3baacc3', 'c97f72b9-2159-11ea-b83e-6214b3baacc3', NULL, 'teacher', 'string', 0, '2019-12-18 13:46:50', NULL, NULL, NULL, 'wangls', NULL);
+INSERT INTO `act_hi_detail` VALUES ('c97f99cf-2159-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d28bd-2159-11ea-b83e-6214b3baacc3', 'c97f72b9-2159-11ea-b83e-6214b3baacc3', NULL, 'director', 'string', 0, '2019-12-18 13:46:50', NULL, NULL, NULL, 'lizr', NULL);
+INSERT INTO `act_hi_detail` VALUES ('c97fbfe1-2159-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d28bd-2159-11ea-b83e-6214b3baacc3', 'c97f72b9-2159-11ea-b83e-6214b3baacc3', NULL, 'days', 'integer', 0, '2019-12-18 13:46:50', NULL, NULL, 23, '23', NULL);
+INSERT INTO `act_hi_detail` VALUES ('c97fbfe3-2159-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d28bd-2159-11ea-b83e-6214b3baacc3', 'c97f72b9-2159-11ea-b83e-6214b3baacc3', NULL, 'username', 'string', 0, '2019-12-18 13:46:50', NULL, NULL, NULL, 'xiaoming', NULL);
+INSERT INTO `act_hi_detail` VALUES ('c97fbfe8-2159-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', 'c97fbfe6-2159-11ea-b83e-6214b3baacc3', NULL, 'types', 'string', 0, '2019-12-18 13:46:50', NULL, NULL, NULL, '调休', NULL);
+INSERT INTO `act_hi_detail` VALUES ('c97fe6fa-2159-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', 'c97fbfe6-2159-11ea-b83e-6214b3baacc3', NULL, 'teacher', 'string', 0, '2019-12-18 13:46:50', NULL, NULL, NULL, 'wangls', NULL);
+INSERT INTO `act_hi_detail` VALUES ('c97fe6fc-2159-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', 'c97fbfe6-2159-11ea-b83e-6214b3baacc3', NULL, 'director', 'string', 0, '2019-12-18 13:46:50', NULL, NULL, NULL, 'lizr', NULL);
+INSERT INTO `act_hi_detail` VALUES ('c97fe6fe-2159-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', 'c97fbfe6-2159-11ea-b83e-6214b3baacc3', NULL, 'days', 'integer', 0, '2019-12-18 13:46:50', NULL, NULL, 23, '23', NULL);
+INSERT INTO `act_hi_detail` VALUES ('c97fe700-2159-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', 'c97fbfe6-2159-11ea-b83e-6214b3baacc3', NULL, 'username', 'string', 0, '2019-12-18 13:46:50', NULL, NULL, NULL, 'xiaoming', NULL);
+INSERT INTO `act_hi_detail` VALUES ('d480d3d3-2159-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, 'c97f72b8-2159-11ea-b83e-6214b3baacc3', 'msg', 'string', 0, '2019-12-18 13:47:08', NULL, NULL, NULL, 'yes', NULL);
+INSERT INTO `act_hi_detail` VALUES ('d4820c54-2159-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, NULL, 'types', 'string', 1, '2019-12-18 13:47:08', NULL, NULL, NULL, '调休', NULL);
+INSERT INTO `act_hi_detail` VALUES ('d4820c55-2159-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, NULL, 'teacher', 'string', 1, '2019-12-18 13:47:08', NULL, NULL, NULL, 'wangls', NULL);
+INSERT INTO `act_hi_detail` VALUES ('d4823366-2159-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, NULL, 'director', 'string', 1, '2019-12-18 13:47:08', NULL, NULL, NULL, 'lizr', NULL);
+INSERT INTO `act_hi_detail` VALUES ('d4828187-2159-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, NULL, 'days', 'integer', 1, '2019-12-18 13:47:08', NULL, NULL, 23, '23', NULL);
+INSERT INTO `act_hi_detail` VALUES ('d482f6b8-2159-11ea-b83e-6214b3baacc3', 'VariableUpdate', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, NULL, 'username', 'string', 1, '2019-12-18 13:47:08', NULL, NULL, NULL, 'xiaoming', NULL);
 INSERT INTO `act_hi_detail` VALUES ('d6b7e8b0-20a9-11ea-9656-6214b3baacc3', 'VariableUpdate', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', NULL, 'b2c8d79e-20a9-11ea-9656-6214b3baacc3', 'msg', 'string', 1, '2019-12-17 16:47:21', NULL, NULL, NULL, 'yes', NULL);
 INSERT INTO `act_hi_detail` VALUES ('d6ba32a1-20a9-11ea-9656-6214b3baacc3', 'VariableUpdate', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', NULL, NULL, 'types', 'string', 1, '2019-12-17 16:47:21', NULL, NULL, NULL, '调休', NULL);
 INSERT INTO `act_hi_detail` VALUES ('d6ba32a2-20a9-11ea-9656-6214b3baacc3', 'VariableUpdate', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', NULL, NULL, 'teacher', 'string', 1, '2019-12-17 16:47:21', NULL, NULL, NULL, 'wangls', NULL);
@@ -300,11 +403,21 @@ CREATE TABLE `act_hi_identitylink`  (
 -- ----------------------------
 -- Records of act_hi_identitylink
 -- ----------------------------
+INSERT INTO `act_hi_identitylink` VALUES ('1cf5b77b-215a-11ea-b83e-6214b3baacc3', NULL, 'starter', 'xiaoming', NULL, '1cf5b77a-215a-11ea-b83e-6214b3baacc3');
+INSERT INTO `act_hi_identitylink` VALUES ('1cf605ad-215a-11ea-b83e-6214b3baacc3', NULL, 'participant', 'lizr', NULL, '1cf5b77a-215a-11ea-b83e-6214b3baacc3');
+INSERT INTO `act_hi_identitylink` VALUES ('2bda6e53-215a-11ea-b83e-6214b3baacc3', NULL, 'participant', 'admin', NULL, 'c97d01a5-2159-11ea-b83e-6214b3baacc3');
+INSERT INTO `act_hi_identitylink` VALUES ('2cdb63a3-215a-11ea-b83e-6214b3baacc3', NULL, 'participant', 'admin', NULL, '1cf5b77a-215a-11ea-b83e-6214b3baacc3');
+INSERT INTO `act_hi_identitylink` VALUES ('46709d43-215a-11ea-b83e-6214b3baacc3', NULL, 'starter', 'xiaoming', NULL, '46709d42-215a-11ea-b83e-6214b3baacc3');
+INSERT INTO `act_hi_identitylink` VALUES ('4670c465-215a-11ea-b83e-6214b3baacc3', NULL, 'participant', 'lizr', NULL, '46709d42-215a-11ea-b83e-6214b3baacc3');
+INSERT INTO `act_hi_identitylink` VALUES ('4f1c9db5-215a-11ea-b83e-6214b3baacc3', NULL, 'participant', 'admin', NULL, '46709d42-215a-11ea-b83e-6214b3baacc3');
 INSERT INTO `act_hi_identitylink` VALUES ('b2c8625c-20a9-11ea-9656-6214b3baacc3', NULL, 'starter', 'xiaoming', NULL, 'b2c8625b-20a9-11ea-9656-6214b3baacc3');
 INSERT INTO `act_hi_identitylink` VALUES ('b2c925ca-20a9-11ea-9656-6214b3baacc3', NULL, 'participant', 'wangls', NULL, 'b2c8625b-20a9-11ea-9656-6214b3baacc3');
 INSERT INTO `act_hi_identitylink` VALUES ('b2c94ce7-20a9-11ea-9656-6214b3baacc3', NULL, 'participant', 'lizr', NULL, 'b2c8625b-20a9-11ea-9656-6214b3baacc3');
 INSERT INTO `act_hi_identitylink` VALUES ('b9b6b880-213e-11ea-b83e-6214b3baacc3', NULL, 'starter', 'xiaoming', NULL, 'b9b6b87f-213e-11ea-b83e-6214b3baacc3');
 INSERT INTO `act_hi_identitylink` VALUES ('b9c118d6-213e-11ea-b83e-6214b3baacc3', NULL, 'participant', 'lizr', NULL, 'b9b6b87f-213e-11ea-b83e-6214b3baacc3');
+INSERT INTO `act_hi_identitylink` VALUES ('c97d01a6-2159-11ea-b83e-6214b3baacc3', NULL, 'starter', 'xiaoming', NULL, 'c97d01a5-2159-11ea-b83e-6214b3baacc3');
+INSERT INTO `act_hi_identitylink` VALUES ('c97fbfe4-2159-11ea-b83e-6214b3baacc3', NULL, 'participant', 'wangls', NULL, 'c97d01a5-2159-11ea-b83e-6214b3baacc3');
+INSERT INTO `act_hi_identitylink` VALUES ('c97fe701-2159-11ea-b83e-6214b3baacc3', NULL, 'participant', 'lizr', NULL, 'c97d01a5-2159-11ea-b83e-6214b3baacc3');
 INSERT INTO `act_hi_identitylink` VALUES ('d6bccac5-20a9-11ea-9656-6214b3baacc3', NULL, 'participant', 'admin', NULL, 'b2c8625b-20a9-11ea-9656-6214b3baacc3');
 INSERT INTO `act_hi_identitylink` VALUES ('df753269-213e-11ea-b83e-6214b3baacc3', NULL, 'participant', 'admin', NULL, 'b9b6b87f-213e-11ea-b83e-6214b3baacc3');
 
@@ -336,8 +449,11 @@ CREATE TABLE `act_hi_procinst`  (
 -- ----------------------------
 -- Records of act_hi_procinst
 -- ----------------------------
+INSERT INTO `act_hi_procinst` VALUES ('1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', NULL, 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', '2019-12-18 13:49:10', '2019-12-18 13:49:49', 39094, 'xiaoming', 'StartEvent_1', 'EndEvent_0wpca53', NULL, NULL, '', NULL);
+INSERT INTO `act_hi_procinst` VALUES ('46709d42-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', NULL, 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', '2019-12-18 13:50:20', NULL, NULL, 'xiaoming', 'StartEvent_1', NULL, NULL, NULL, '', NULL);
 INSERT INTO `act_hi_procinst` VALUES ('b2c8625b-20a9-11ea-9656-6214b3baacc3', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', NULL, 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', '2019-12-17 16:46:20', '2019-12-17 16:47:47', 87502, 'xiaoming', 'StartEvent_1', 'EndEvent_0wpca53', NULL, NULL, '', NULL);
 INSERT INTO `act_hi_procinst` VALUES ('b9b6b87f-213e-11ea-b83e-6214b3baacc3', 'b9b6b87f-213e-11ea-b83e-6214b3baacc3', NULL, 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', '2019-12-18 10:33:07', '2019-12-18 10:38:56', 349423, 'xiaoming', 'StartEvent_1', 'EndEvent_0wpca53', NULL, NULL, '', NULL);
+INSERT INTO `act_hi_procinst` VALUES ('c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', '2019-12-18 13:46:50', '2019-12-18 13:49:51', 181077, 'xiaoming', 'StartEvent_1', 'EndEvent_0wpca53', NULL, NULL, '', NULL);
 
 -- ----------------------------
 -- Table structure for act_hi_taskinst
@@ -371,10 +487,18 @@ CREATE TABLE `act_hi_taskinst`  (
 -- ----------------------------
 -- Records of act_hi_taskinst
 -- ----------------------------
+INSERT INTO `act_hi_taskinst` VALUES ('1cf5de96-215a-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'UserTask_0vx7s25', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b782-215a-11ea-b83e-6214b3baacc3', '审批【主任】', NULL, NULL, NULL, 'lizr', '2019-12-18 13:49:10', NULL, '2019-12-18 13:49:37', 27152, NULL, 50, NULL, NULL, NULL, '');
+INSERT INTO `act_hi_taskinst` VALUES ('2bda2026-215a-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'UserTask_07bqdfg', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', '校长【审批】', NULL, NULL, NULL, 'admin', '2019-12-18 13:49:35', NULL, '2019-12-18 13:49:51', 16068, NULL, 50, NULL, NULL, NULL, '');
+INSERT INTO `act_hi_taskinst` VALUES ('2cdac75a-215a-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'Task_1idf8u6', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b782-215a-11ea-b83e-6214b3baacc3', '校长【审批】', NULL, NULL, NULL, 'admin', '2019-12-18 13:49:37', NULL, '2019-12-18 13:49:49', 12084, NULL, 50, NULL, NULL, NULL, '');
+INSERT INTO `act_hi_taskinst` VALUES ('4670c45e-215a-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'UserTask_0vx7s25', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '审批【主任】', NULL, NULL, NULL, 'lizr', '2019-12-18 13:50:20', NULL, '2019-12-18 13:50:34', 14624, NULL, 50, NULL, NULL, NULL, '');
+INSERT INTO `act_hi_taskinst` VALUES ('4f1c769c-215a-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'Task_1idf8u6', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '校长【审批】', NULL, NULL, NULL, 'admin', '2019-12-18 13:50:34', NULL, '2019-12-18 13:50:48', 14491, NULL, 50, NULL, NULL, NULL, '');
+INSERT INTO `act_hi_taskinst` VALUES ('57608d6c-215a-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'UserTask_0vx7s25', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '审批【主任】', NULL, NULL, NULL, 'lizr', '2019-12-18 13:50:48', NULL, NULL, NULL, NULL, 50, NULL, NULL, NULL, '');
 INSERT INTO `act_hi_taskinst` VALUES ('6a7acc03-213f-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'Task_1idf8u6', 'b9b6b87f-213e-11ea-b83e-6214b3baacc3', 'b9b88d49-213e-11ea-b83e-6214b3baacc3', '校长【审批】', NULL, NULL, NULL, 'admin', '2019-12-18 10:38:04', NULL, '2019-12-18 10:38:56', 52402, NULL, 50, NULL, NULL, NULL, '');
 INSERT INTO `act_hi_taskinst` VALUES ('b2c8d79f-20a9-11ea-9656-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'Task_1ckj7m2', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', 'b2c86263-20a9-11ea-9656-6214b3baacc3', '审批【老师】', NULL, NULL, NULL, 'wangls', '2019-12-17 16:46:20', NULL, '2019-12-17 16:47:21', 61235, NULL, 50, NULL, NULL, NULL, '');
 INSERT INTO `act_hi_taskinst` VALUES ('b2c925cc-20a9-11ea-9656-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'UserTask_0cexsmw', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', 'b2c8b087-20a9-11ea-9656-6214b3baacc3', '审批【主任】', NULL, NULL, NULL, 'lizr', '2019-12-17 16:46:20', NULL, '2019-12-17 16:46:57', 37307, NULL, 50, NULL, NULL, NULL, '');
 INSERT INTO `act_hi_taskinst` VALUES ('b9c0a39d-213e-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'UserTask_0vx7s25', 'b9b6b87f-213e-11ea-b83e-6214b3baacc3', 'b9b88d49-213e-11ea-b83e-6214b3baacc3', '审批【主任】', NULL, NULL, NULL, 'lizr', '2019-12-18 10:33:07', NULL, '2019-12-18 10:34:10', 63884, NULL, 50, NULL, NULL, NULL, '');
+INSERT INTO `act_hi_taskinst` VALUES ('c97f72b9-2159-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'Task_1ckj7m2', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d28bd-2159-11ea-b83e-6214b3baacc3', '审批【老师】', NULL, NULL, NULL, 'wangls', '2019-12-18 13:46:50', NULL, '2019-12-18 13:47:08', 18939, NULL, 50, NULL, NULL, NULL, '');
+INSERT INTO `act_hi_taskinst` VALUES ('c97fbfe6-2159-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'UserTask_0cexsmw', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', '审批【主任】', NULL, NULL, NULL, 'lizr', '2019-12-18 13:46:50', NULL, '2019-12-18 13:49:35', 165460, NULL, 50, NULL, NULL, NULL, '');
 INSERT INTO `act_hi_taskinst` VALUES ('d6bc7c98-20a9-11ea-9656-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'UserTask_07bqdfg', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', 'b2c86263-20a9-11ea-9656-6214b3baacc3', '校长【审批】', NULL, NULL, NULL, 'admin', '2019-12-17 16:47:21', NULL, '2019-12-17 16:47:47', 26488, NULL, 50, NULL, NULL, NULL, '');
 INSERT INTO `act_hi_taskinst` VALUES ('df74bd2e-213e-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'Task_1idf8u6', 'b9b6b87f-213e-11ea-b83e-6214b3baacc3', 'b9b88d49-213e-11ea-b83e-6214b3baacc3', '校长【审批】', NULL, NULL, NULL, 'admin', '2019-12-18 10:34:10', NULL, '2019-12-18 10:34:24', 14845, NULL, 50, NULL, NULL, NULL, '');
 INSERT INTO `act_hi_taskinst` VALUES ('e7c77a01-213e-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', 'UserTask_0vx7s25', 'b9b6b87f-213e-11ea-b83e-6214b3baacc3', 'b9b88d49-213e-11ea-b83e-6214b3baacc3', '审批【主任】', NULL, NULL, NULL, 'lizr', '2019-12-18 10:34:24', NULL, '2019-12-18 10:38:04', 220126, NULL, 50, NULL, NULL, NULL, '');
@@ -407,6 +531,38 @@ CREATE TABLE `act_hi_varinst`  (
 -- ----------------------------
 -- Records of act_hi_varinst
 -- ----------------------------
+INSERT INTO `act_hi_varinst` VALUES ('1cf5b77c-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', NULL, 'types', 'string', 2, NULL, NULL, NULL, '调休', NULL, '2019-12-18 13:49:10', '2019-12-18 13:49:49');
+INSERT INTO `act_hi_varinst` VALUES ('1cf5b77e-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', NULL, 'days', 'integer', 2, NULL, NULL, 34, '34', NULL, '2019-12-18 13:49:10', '2019-12-18 13:49:49');
+INSERT INTO `act_hi_varinst` VALUES ('1cf5b780-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', NULL, 'username', 'string', 2, NULL, NULL, NULL, 'xiaoming', NULL, '2019-12-18 13:49:10', '2019-12-18 13:49:49');
+INSERT INTO `act_hi_varinst` VALUES ('1cf5de97-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b782-215a-11ea-b83e-6214b3baacc3', '1cf5de96-215a-11ea-b83e-6214b3baacc3', 'types', 'string', 0, NULL, NULL, NULL, '调休', NULL, '2019-12-18 13:49:10', '2019-12-18 13:49:10');
+INSERT INTO `act_hi_varinst` VALUES ('1cf5de99-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b782-215a-11ea-b83e-6214b3baacc3', '1cf5de96-215a-11ea-b83e-6214b3baacc3', 'days', 'integer', 0, NULL, NULL, 34, '34', NULL, '2019-12-18 13:49:10', '2019-12-18 13:49:10');
+INSERT INTO `act_hi_varinst` VALUES ('1cf5de9b-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b782-215a-11ea-b83e-6214b3baacc3', '1cf5de96-215a-11ea-b83e-6214b3baacc3', 'username', 'string', 0, NULL, NULL, NULL, 'xiaoming', NULL, '2019-12-18 13:49:10', '2019-12-18 13:49:10');
+INSERT INTO `act_hi_varinst` VALUES ('2bda4737-215a-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', '2bda2026-215a-11ea-b83e-6214b3baacc3', 'msg', 'string', 1, NULL, NULL, NULL, 'yes', NULL, '2019-12-18 13:49:35', '2019-12-18 13:49:51');
+INSERT INTO `act_hi_varinst` VALUES ('2bda4739-215a-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', '2bda2026-215a-11ea-b83e-6214b3baacc3', 'types', 'string', 0, NULL, NULL, NULL, '调休', NULL, '2019-12-18 13:49:35', '2019-12-18 13:49:35');
+INSERT INTO `act_hi_varinst` VALUES ('2bda473b-215a-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', '2bda2026-215a-11ea-b83e-6214b3baacc3', 'teacher', 'string', 0, NULL, NULL, NULL, 'wangls', NULL, '2019-12-18 13:49:35', '2019-12-18 13:49:35');
+INSERT INTO `act_hi_varinst` VALUES ('2bda473d-215a-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', '2bda2026-215a-11ea-b83e-6214b3baacc3', 'director', 'string', 0, NULL, NULL, NULL, 'lizr', NULL, '2019-12-18 13:49:35', '2019-12-18 13:49:35');
+INSERT INTO `act_hi_varinst` VALUES ('2bda473f-215a-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', '2bda2026-215a-11ea-b83e-6214b3baacc3', 'days', 'integer', 0, NULL, NULL, 23, '23', NULL, '2019-12-18 13:49:35', '2019-12-18 13:49:35');
+INSERT INTO `act_hi_varinst` VALUES ('2bda4741-215a-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', '2bda2026-215a-11ea-b83e-6214b3baacc3', 'username', 'string', 0, NULL, NULL, NULL, 'xiaoming', NULL, '2019-12-18 13:49:35', '2019-12-18 13:49:35');
+INSERT INTO `act_hi_varinst` VALUES ('2cd6f6c4-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', NULL, 'msg', 'string', 1, NULL, NULL, NULL, 'yes', NULL, '2019-12-18 13:49:37', '2019-12-18 13:49:49');
+INSERT INTO `act_hi_varinst` VALUES ('2cdaee6b-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b782-215a-11ea-b83e-6214b3baacc3', '2cdac75a-215a-11ea-b83e-6214b3baacc3', 'msg', 'string', 1, NULL, NULL, NULL, 'yes', NULL, '2019-12-18 13:49:37', '2019-12-18 13:49:49');
+INSERT INTO `act_hi_varinst` VALUES ('2cdaee6d-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b782-215a-11ea-b83e-6214b3baacc3', '2cdac75a-215a-11ea-b83e-6214b3baacc3', 'types', 'string', 0, NULL, NULL, NULL, '调休', NULL, '2019-12-18 13:49:37', '2019-12-18 13:49:37');
+INSERT INTO `act_hi_varinst` VALUES ('2cdaee6f-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b782-215a-11ea-b83e-6214b3baacc3', '2cdac75a-215a-11ea-b83e-6214b3baacc3', 'days', 'integer', 0, NULL, NULL, 34, '34', NULL, '2019-12-18 13:49:37', '2019-12-18 13:49:37');
+INSERT INTO `act_hi_varinst` VALUES ('2cdaee71-215a-11ea-b83e-6214b3baacc3', '1cf5b77a-215a-11ea-b83e-6214b3baacc3', '1cf5b782-215a-11ea-b83e-6214b3baacc3', '2cdac75a-215a-11ea-b83e-6214b3baacc3', 'username', 'string', 0, NULL, NULL, NULL, 'xiaoming', NULL, '2019-12-18 13:49:37', '2019-12-18 13:49:37');
+INSERT INTO `act_hi_varinst` VALUES ('46709d44-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', NULL, 'types', 'string', 2, NULL, NULL, NULL, '调休', NULL, '2019-12-18 13:50:20', '2019-12-18 13:50:48');
+INSERT INTO `act_hi_varinst` VALUES ('46709d46-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', NULL, 'days', 'integer', 2, NULL, NULL, 32, '32', NULL, '2019-12-18 13:50:20', '2019-12-18 13:50:48');
+INSERT INTO `act_hi_varinst` VALUES ('46709d48-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', NULL, 'username', 'string', 2, NULL, NULL, NULL, 'xiaoming', NULL, '2019-12-18 13:50:20', '2019-12-18 13:50:48');
+INSERT INTO `act_hi_varinst` VALUES ('4670c45f-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '4670c45e-215a-11ea-b83e-6214b3baacc3', 'types', 'string', 0, NULL, NULL, NULL, '调休', NULL, '2019-12-18 13:50:20', '2019-12-18 13:50:20');
+INSERT INTO `act_hi_varinst` VALUES ('4670c461-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '4670c45e-215a-11ea-b83e-6214b3baacc3', 'days', 'integer', 0, NULL, NULL, 32, '32', NULL, '2019-12-18 13:50:20', '2019-12-18 13:50:20');
+INSERT INTO `act_hi_varinst` VALUES ('4670c463-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '4670c45e-215a-11ea-b83e-6214b3baacc3', 'username', 'string', 0, NULL, NULL, NULL, 'xiaoming', NULL, '2019-12-18 13:50:20', '2019-12-18 13:50:20');
+INSERT INTO `act_hi_varinst` VALUES ('4f18f426-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', NULL, 'msg', 'string', 1, NULL, NULL, NULL, 'no', NULL, '2019-12-18 13:50:34', '2019-12-18 13:50:48');
+INSERT INTO `act_hi_varinst` VALUES ('4f1c769d-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '4f1c769c-215a-11ea-b83e-6214b3baacc3', 'msg', 'string', 1, NULL, NULL, NULL, 'no', NULL, '2019-12-18 13:50:34', '2019-12-18 13:50:48');
+INSERT INTO `act_hi_varinst` VALUES ('4f1c769f-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '4f1c769c-215a-11ea-b83e-6214b3baacc3', 'types', 'string', 0, NULL, NULL, NULL, '调休', NULL, '2019-12-18 13:50:34', '2019-12-18 13:50:34');
+INSERT INTO `act_hi_varinst` VALUES ('4f1c76a1-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '4f1c769c-215a-11ea-b83e-6214b3baacc3', 'days', 'integer', 0, NULL, NULL, 32, '32', NULL, '2019-12-18 13:50:34', '2019-12-18 13:50:34');
+INSERT INTO `act_hi_varinst` VALUES ('4f1c76a3-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '4f1c769c-215a-11ea-b83e-6214b3baacc3', 'username', 'string', 0, NULL, NULL, NULL, 'xiaoming', NULL, '2019-12-18 13:50:34', '2019-12-18 13:50:34');
+INSERT INTO `act_hi_varinst` VALUES ('57608d6d-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '57608d6c-215a-11ea-b83e-6214b3baacc3', 'msg', 'string', 0, NULL, NULL, NULL, 'no', NULL, '2019-12-18 13:50:48', '2019-12-18 13:50:48');
+INSERT INTO `act_hi_varinst` VALUES ('57608d6f-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '57608d6c-215a-11ea-b83e-6214b3baacc3', 'types', 'string', 0, NULL, NULL, NULL, '调休', NULL, '2019-12-18 13:50:48', '2019-12-18 13:50:48');
+INSERT INTO `act_hi_varinst` VALUES ('57608d71-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '57608d6c-215a-11ea-b83e-6214b3baacc3', 'days', 'integer', 0, NULL, NULL, 32, '32', NULL, '2019-12-18 13:50:48', '2019-12-18 13:50:48');
+INSERT INTO `act_hi_varinst` VALUES ('57608d73-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d4a-215a-11ea-b83e-6214b3baacc3', '57608d6c-215a-11ea-b83e-6214b3baacc3', 'username', 'string', 0, NULL, NULL, NULL, 'xiaoming', NULL, '2019-12-18 13:50:48', '2019-12-18 13:50:48');
 INSERT INTO `act_hi_varinst` VALUES ('6a7af314-213f-11ea-b83e-6214b3baacc3', 'b9b6b87f-213e-11ea-b83e-6214b3baacc3', 'b9b88d49-213e-11ea-b83e-6214b3baacc3', '6a7acc03-213f-11ea-b83e-6214b3baacc3', 'msg', 'string', 1, NULL, NULL, NULL, 'yes', NULL, '2019-12-18 10:38:04', '2019-12-18 10:38:56');
 INSERT INTO `act_hi_varinst` VALUES ('6a7af316-213f-11ea-b83e-6214b3baacc3', 'b9b6b87f-213e-11ea-b83e-6214b3baacc3', 'b9b88d49-213e-11ea-b83e-6214b3baacc3', '6a7acc03-213f-11ea-b83e-6214b3baacc3', 'types', 'string', 0, NULL, NULL, NULL, '调休', NULL, '2019-12-18 10:38:04', '2019-12-18 10:38:04');
 INSERT INTO `act_hi_varinst` VALUES ('6a7af318-213f-11ea-b83e-6214b3baacc3', 'b9b6b87f-213e-11ea-b83e-6214b3baacc3', 'b9b88d49-213e-11ea-b83e-6214b3baacc3', '6a7acc03-213f-11ea-b83e-6214b3baacc3', 'contents', 'string', 0, NULL, NULL, NULL, '测试驳回功能', NULL, '2019-12-18 10:38:04', '2019-12-18 10:38:04');
@@ -436,6 +592,22 @@ INSERT INTO `act_hi_varinst` VALUES ('b9c118d0-213e-11ea-b83e-6214b3baacc3', 'b9
 INSERT INTO `act_hi_varinst` VALUES ('b9c118d2-213e-11ea-b83e-6214b3baacc3', 'b9b6b87f-213e-11ea-b83e-6214b3baacc3', 'b9b88d49-213e-11ea-b83e-6214b3baacc3', 'b9c0a39d-213e-11ea-b83e-6214b3baacc3', 'days', 'integer', 0, NULL, NULL, 45, '45', NULL, '2019-12-18 10:33:07', '2019-12-18 10:33:07');
 INSERT INTO `act_hi_varinst` VALUES ('b9c118d4-213e-11ea-b83e-6214b3baacc3', 'b9b6b87f-213e-11ea-b83e-6214b3baacc3', 'b9b88d49-213e-11ea-b83e-6214b3baacc3', 'b9c0a39d-213e-11ea-b83e-6214b3baacc3', 'username', 'string', 0, NULL, NULL, NULL, 'xiaoming', NULL, '2019-12-18 10:33:07', '2019-12-18 10:33:07');
 INSERT INTO `act_hi_varinst` VALUES ('c8725828-20a9-11ea-9656-6214b3baacc3', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', NULL, 'msg', 'string', 2, NULL, NULL, NULL, 'yes', NULL, '2019-12-17 16:46:57', '2019-12-17 16:47:47');
+INSERT INTO `act_hi_varinst` VALUES ('c97d01a7-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, 'types', 'string', 3, NULL, NULL, NULL, '调休', NULL, '2019-12-18 13:46:50', '2019-12-18 13:49:51');
+INSERT INTO `act_hi_varinst` VALUES ('c97d28b9-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, 'days', 'integer', 3, NULL, NULL, 23, '23', NULL, '2019-12-18 13:46:50', '2019-12-18 13:49:51');
+INSERT INTO `act_hi_varinst` VALUES ('c97d28bb-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, 'username', 'string', 3, NULL, NULL, NULL, 'xiaoming', NULL, '2019-12-18 13:46:50', '2019-12-18 13:49:51');
+INSERT INTO `act_hi_varinst` VALUES ('c97f72b2-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, 'director', 'string', 3, NULL, NULL, NULL, 'lizr', NULL, '2019-12-18 13:46:50', '2019-12-18 13:49:51');
+INSERT INTO `act_hi_varinst` VALUES ('c97f72b4-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, 'teacher', 'string', 3, NULL, NULL, NULL, 'wangls', NULL, '2019-12-18 13:46:50', '2019-12-18 13:49:51');
+INSERT INTO `act_hi_varinst` VALUES ('c97f99ca-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d28bd-2159-11ea-b83e-6214b3baacc3', 'c97f72b9-2159-11ea-b83e-6214b3baacc3', 'types', 'string', 0, NULL, NULL, NULL, '调休', NULL, '2019-12-18 13:46:50', '2019-12-18 13:46:50');
+INSERT INTO `act_hi_varinst` VALUES ('c97f99cc-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d28bd-2159-11ea-b83e-6214b3baacc3', 'c97f72b9-2159-11ea-b83e-6214b3baacc3', 'teacher', 'string', 0, NULL, NULL, NULL, 'wangls', NULL, '2019-12-18 13:46:50', '2019-12-18 13:46:50');
+INSERT INTO `act_hi_varinst` VALUES ('c97f99ce-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d28bd-2159-11ea-b83e-6214b3baacc3', 'c97f72b9-2159-11ea-b83e-6214b3baacc3', 'director', 'string', 0, NULL, NULL, NULL, 'lizr', NULL, '2019-12-18 13:46:50', '2019-12-18 13:46:50');
+INSERT INTO `act_hi_varinst` VALUES ('c97fbfe0-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d28bd-2159-11ea-b83e-6214b3baacc3', 'c97f72b9-2159-11ea-b83e-6214b3baacc3', 'days', 'integer', 0, NULL, NULL, 23, '23', NULL, '2019-12-18 13:46:50', '2019-12-18 13:46:50');
+INSERT INTO `act_hi_varinst` VALUES ('c97fbfe2-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d28bd-2159-11ea-b83e-6214b3baacc3', 'c97f72b9-2159-11ea-b83e-6214b3baacc3', 'username', 'string', 0, NULL, NULL, NULL, 'xiaoming', NULL, '2019-12-18 13:46:50', '2019-12-18 13:46:50');
+INSERT INTO `act_hi_varinst` VALUES ('c97fbfe7-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', 'c97fbfe6-2159-11ea-b83e-6214b3baacc3', 'types', 'string', 0, NULL, NULL, NULL, '调休', NULL, '2019-12-18 13:46:50', '2019-12-18 13:46:50');
+INSERT INTO `act_hi_varinst` VALUES ('c97fbfe9-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', 'c97fbfe6-2159-11ea-b83e-6214b3baacc3', 'teacher', 'string', 0, NULL, NULL, NULL, 'wangls', NULL, '2019-12-18 13:46:50', '2019-12-18 13:46:50');
+INSERT INTO `act_hi_varinst` VALUES ('c97fe6fb-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', 'c97fbfe6-2159-11ea-b83e-6214b3baacc3', 'director', 'string', 0, NULL, NULL, NULL, 'lizr', NULL, '2019-12-18 13:46:50', '2019-12-18 13:46:50');
+INSERT INTO `act_hi_varinst` VALUES ('c97fe6fd-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', 'c97fbfe6-2159-11ea-b83e-6214b3baacc3', 'days', 'integer', 0, NULL, NULL, 23, '23', NULL, '2019-12-18 13:46:50', '2019-12-18 13:46:50');
+INSERT INTO `act_hi_varinst` VALUES ('c97fe6ff-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d4fd1-2159-11ea-b83e-6214b3baacc3', 'c97fbfe6-2159-11ea-b83e-6214b3baacc3', 'username', 'string', 0, NULL, NULL, NULL, 'xiaoming', NULL, '2019-12-18 13:46:50', '2019-12-18 13:46:50');
+INSERT INTO `act_hi_varinst` VALUES ('d480d3d2-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', 'c97d01a5-2159-11ea-b83e-6214b3baacc3', NULL, 'msg', 'string', 2, NULL, NULL, NULL, 'yes', NULL, '2019-12-18 13:47:08', '2019-12-18 13:49:51');
 INSERT INTO `act_hi_varinst` VALUES ('d6bca3a9-20a9-11ea-9656-6214b3baacc3', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', 'b2c86263-20a9-11ea-9656-6214b3baacc3', 'd6bc7c98-20a9-11ea-9656-6214b3baacc3', 'msg', 'string', 1, NULL, NULL, NULL, 'yes', NULL, '2019-12-17 16:47:21', '2019-12-17 16:47:47');
 INSERT INTO `act_hi_varinst` VALUES ('d6bca3ab-20a9-11ea-9656-6214b3baacc3', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', 'b2c86263-20a9-11ea-9656-6214b3baacc3', 'd6bc7c98-20a9-11ea-9656-6214b3baacc3', 'types', 'string', 0, NULL, NULL, NULL, '调休', NULL, '2019-12-17 16:47:21', '2019-12-17 16:47:21');
 INSERT INTO `act_hi_varinst` VALUES ('d6bca3ad-20a9-11ea-9656-6214b3baacc3', 'b2c8625b-20a9-11ea-9656-6214b3baacc3', 'b2c86263-20a9-11ea-9656-6214b3baacc3', 'd6bc7c98-20a9-11ea-9656-6214b3baacc3', 'teacher', 'string', 0, NULL, NULL, NULL, 'wangls', NULL, '2019-12-17 16:47:21', '2019-12-17 16:47:21');
@@ -648,6 +820,12 @@ CREATE TABLE `act_ru_execution`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Compact;
 
 -- ----------------------------
+-- Records of act_ru_execution
+-- ----------------------------
+INSERT INTO `act_ru_execution` VALUES ('46709d42-215a-11ea-b83e-6214b3baacc3', 1, '46709d42-215a-11ea-b83e-6214b3baacc3', NULL, NULL, 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', NULL, '46709d42-215a-11ea-b83e-6214b3baacc3', NULL, 1, 0, 1, 0, 0, 1, NULL, '', NULL, '2019-12-18 13:50:20', 'xiaoming', NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+INSERT INTO `act_ru_execution` VALUES ('46709d4a-215a-11ea-b83e-6214b3baacc3', 3, '46709d42-215a-11ea-b83e-6214b3baacc3', NULL, '46709d42-215a-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', NULL, '46709d42-215a-11ea-b83e-6214b3baacc3', 'UserTask_0vx7s25', 1, 0, 0, 0, 0, 1, NULL, '', NULL, '2019-12-18 13:50:20', NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+-- ----------------------------
 -- Table structure for act_ru_identitylink
 -- ----------------------------
 DROP TABLE IF EXISTS `act_ru_identitylink`;
@@ -670,6 +848,13 @@ CREATE TABLE `act_ru_identitylink`  (
   CONSTRAINT `ACT_FK_IDL_PROCINST` FOREIGN KEY (`PROC_INST_ID_`) REFERENCES `act_ru_execution` (`ID_`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `ACT_FK_TSKASS_TASK` FOREIGN KEY (`TASK_ID_`) REFERENCES `act_ru_task` (`ID_`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of act_ru_identitylink
+-- ----------------------------
+INSERT INTO `act_ru_identitylink` VALUES ('46709d43-215a-11ea-b83e-6214b3baacc3', 1, NULL, 'starter', 'xiaoming', NULL, '46709d42-215a-11ea-b83e-6214b3baacc3', NULL);
+INSERT INTO `act_ru_identitylink` VALUES ('4670c465-215a-11ea-b83e-6214b3baacc3', 1, NULL, 'participant', 'lizr', NULL, '46709d42-215a-11ea-b83e-6214b3baacc3', NULL);
+INSERT INTO `act_ru_identitylink` VALUES ('4f1c9db5-215a-11ea-b83e-6214b3baacc3', 1, NULL, 'participant', 'admin', NULL, '46709d42-215a-11ea-b83e-6214b3baacc3', NULL);
 
 -- ----------------------------
 -- Table structure for act_ru_integration
@@ -791,6 +976,11 @@ CREATE TABLE `act_ru_task`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Compact;
 
 -- ----------------------------
+-- Records of act_ru_task
+-- ----------------------------
+INSERT INTO `act_ru_task` VALUES ('57608d6c-215a-11ea-b83e-6214b3baacc3', 1, '46709d4a-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', 'Process_12-2:1:a1e4804a-20a9-11ea-9656-6214b3baacc3', '审批【主任】', NULL, NULL, 'UserTask_0vx7s25', NULL, 'lizr', NULL, 50, '2019-12-18 13:50:48', NULL, NULL, 1, '', NULL, NULL);
+
+-- ----------------------------
 -- Table structure for act_ru_timer_job
 -- ----------------------------
 DROP TABLE IF EXISTS `act_ru_timer_job`;
@@ -849,6 +1039,18 @@ CREATE TABLE `act_ru_variable`  (
   CONSTRAINT `ACT_FK_VAR_EXE` FOREIGN KEY (`EXECUTION_ID_`) REFERENCES `act_ru_execution` (`ID_`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `ACT_FK_VAR_PROCINST` FOREIGN KEY (`PROC_INST_ID_`) REFERENCES `act_ru_execution` (`ID_`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of act_ru_variable
+-- ----------------------------
+INSERT INTO `act_ru_variable` VALUES ('46709d44-215a-11ea-b83e-6214b3baacc3', 1, 'string', 'types', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', NULL, NULL, NULL, NULL, '调休', NULL);
+INSERT INTO `act_ru_variable` VALUES ('46709d46-215a-11ea-b83e-6214b3baacc3', 1, 'integer', 'days', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', NULL, NULL, NULL, 32, '32', NULL);
+INSERT INTO `act_ru_variable` VALUES ('46709d48-215a-11ea-b83e-6214b3baacc3', 1, 'string', 'username', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', NULL, NULL, NULL, NULL, 'xiaoming', NULL);
+INSERT INTO `act_ru_variable` VALUES ('4f18f426-215a-11ea-b83e-6214b3baacc3', 2, 'string', 'msg', '46709d42-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', NULL, NULL, NULL, NULL, 'no', NULL);
+INSERT INTO `act_ru_variable` VALUES ('57608d6d-215a-11ea-b83e-6214b3baacc3', 1, 'string', 'msg', '46709d4a-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '57608d6c-215a-11ea-b83e-6214b3baacc3', NULL, NULL, NULL, 'no', NULL);
+INSERT INTO `act_ru_variable` VALUES ('57608d6f-215a-11ea-b83e-6214b3baacc3', 1, 'string', 'types', '46709d4a-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '57608d6c-215a-11ea-b83e-6214b3baacc3', NULL, NULL, NULL, '调休', NULL);
+INSERT INTO `act_ru_variable` VALUES ('57608d71-215a-11ea-b83e-6214b3baacc3', 1, 'integer', 'days', '46709d4a-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '57608d6c-215a-11ea-b83e-6214b3baacc3', NULL, NULL, 32, '32', NULL);
+INSERT INTO `act_ru_variable` VALUES ('57608d73-215a-11ea-b83e-6214b3baacc3', 1, 'string', 'username', '46709d4a-215a-11ea-b83e-6214b3baacc3', '46709d42-215a-11ea-b83e-6214b3baacc3', '57608d6c-215a-11ea-b83e-6214b3baacc3', NULL, NULL, NULL, 'xiaoming', NULL);
 
 -- ----------------------------
 -- Table structure for code_generator
@@ -914,7 +1116,7 @@ CREATE TABLE `permission`  (
   `create_user` int(255) NULL DEFAULT NULL COMMENT '创建人',
   `status` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '状态 0禁言  1启用',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 97 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 98 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of permission
@@ -952,6 +1154,7 @@ INSERT INTO `permission` VALUES (93, '工作流', 7000, '', '&#xe61c;', 'act', 0
 INSERT INTO `permission` VALUES (94, '新建工作', 7100, '/web/act/index', '&#xe61c;', 'act:view', 0, 2, 93, '2019-11-22 10:46:35', '2019-11-22 10:48:31', 3, '1');
 INSERT INTO `permission` VALUES (95, '我的申请', 7200, '/web/act/myApply', '&#xe61c;', 'act:apply', 0, 2, 93, '2019-11-27 09:59:16', '2019-11-27 10:08:04', 3, '1');
 INSERT INTO `permission` VALUES (96, '我的待办', 7300, '/web/act/waiting', '&#xe61c;', 'act:waiting', 0, 2, 93, '2019-11-27 10:00:40', '2019-11-27 10:08:20', 3, '1');
+INSERT INTO `permission` VALUES (97, '历史办理', 7400, '/web/act/hisWorkIndex', '&#xe61c;', 'act:his', 0, 2, 93, '2019-12-24 13:56:59', '2019-12-24 14:59:48', 3, '1');
 
 -- ----------------------------
 -- Table structure for role
@@ -991,7 +1194,7 @@ CREATE TABLE `role_permission`  (
   `updatetime` datetime NULL DEFAULT NULL COMMENT '修改时间',
   `status` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '状态 0 、删除 1、启用',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 417 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 532 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of role_permission
@@ -1001,115 +1204,121 @@ INSERT INTO `role_permission` VALUES (246, 5, 3, '2019-05-30 13:33:53', '2019-05
 INSERT INTO `role_permission` VALUES (247, 5, 5, '2019-05-30 13:33:53', '2019-05-30 13:33:53', '1');
 INSERT INTO `role_permission` VALUES (248, 5, 51, '2019-05-30 13:33:53', '2019-05-30 13:33:53', '1');
 INSERT INTO `role_permission` VALUES (249, 5, 74, '2019-05-30 13:33:53', '2019-05-30 13:33:53', '1');
-INSERT INTO `role_permission` VALUES (308, 1, 4, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (309, 1, 2, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (310, 1, 21, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (311, 1, 64, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (312, 1, 65, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (313, 1, 66, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (314, 1, 22, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (315, 1, 68, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (316, 1, 69, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (317, 1, 70, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (318, 1, 23, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (319, 1, 71, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (320, 1, 72, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (321, 1, 73, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (322, 1, 3, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (323, 1, 5, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (324, 1, 51, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (325, 1, 74, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (326, 1, 6, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (327, 1, 61, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (328, 1, 62, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (329, 1, 63, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (330, 1, 92, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (331, 1, 75, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (332, 1, 88, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (333, 1, 89, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (334, 1, 90, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (335, 1, 91, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (336, 1, 93, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (337, 1, 94, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (338, 1, 95, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (339, 1, 96, '2019-11-27 10:00:52', '2019-11-27 10:00:52', '1');
-INSERT INTO `role_permission` VALUES (340, 7, 5, '2019-12-05 13:58:04', '2019-12-05 13:58:04', '1');
-INSERT INTO `role_permission` VALUES (341, 7, 51, '2019-12-05 13:58:04', '2019-12-05 13:58:04', '1');
-INSERT INTO `role_permission` VALUES (342, 7, 74, '2019-12-05 13:58:04', '2019-12-05 13:58:04', '1');
-INSERT INTO `role_permission` VALUES (343, 7, 93, '2019-12-05 13:58:04', '2019-12-05 13:58:04', '1');
-INSERT INTO `role_permission` VALUES (344, 7, 94, '2019-12-05 13:58:04', '2019-12-05 13:58:04', '1');
-INSERT INTO `role_permission` VALUES (345, 7, 95, '2019-12-05 13:58:04', '2019-12-05 13:58:04', '1');
-INSERT INTO `role_permission` VALUES (346, 7, 96, '2019-12-05 13:58:04', '2019-12-05 13:58:04', '1');
-INSERT INTO `role_permission` VALUES (347, 6, 2, '2019-12-05 13:58:27', '2019-12-05 13:58:27', '1');
-INSERT INTO `role_permission` VALUES (348, 6, 21, '2019-12-05 13:58:27', '2019-12-05 13:58:27', '1');
-INSERT INTO `role_permission` VALUES (349, 6, 64, '2019-12-05 13:58:27', '2019-12-05 13:58:27', '1');
-INSERT INTO `role_permission` VALUES (350, 6, 65, '2019-12-05 13:58:27', '2019-12-05 13:58:27', '1');
-INSERT INTO `role_permission` VALUES (351, 6, 66, '2019-12-05 13:58:27', '2019-12-05 13:58:27', '1');
-INSERT INTO `role_permission` VALUES (352, 6, 22, '2019-12-05 13:58:27', '2019-12-05 13:58:27', '1');
-INSERT INTO `role_permission` VALUES (353, 6, 68, '2019-12-05 13:58:27', '2019-12-05 13:58:27', '1');
-INSERT INTO `role_permission` VALUES (354, 6, 69, '2019-12-05 13:58:27', '2019-12-05 13:58:27', '1');
-INSERT INTO `role_permission` VALUES (355, 6, 70, '2019-12-05 13:58:27', '2019-12-05 13:58:27', '1');
-INSERT INTO `role_permission` VALUES (356, 6, 23, '2019-12-05 13:58:27', '2019-12-05 13:58:27', '1');
-INSERT INTO `role_permission` VALUES (357, 6, 71, '2019-12-05 13:58:27', '2019-12-05 13:58:27', '1');
-INSERT INTO `role_permission` VALUES (358, 6, 72, '2019-12-05 13:58:27', '2019-12-05 13:58:27', '1');
-INSERT INTO `role_permission` VALUES (359, 6, 73, '2019-12-05 13:58:27', '2019-12-05 13:58:27', '1');
-INSERT INTO `role_permission` VALUES (360, 6, 5, '2019-12-05 13:58:27', '2019-12-05 13:58:27', '1');
-INSERT INTO `role_permission` VALUES (361, 6, 51, '2019-12-05 13:58:27', '2019-12-05 13:58:27', '1');
-INSERT INTO `role_permission` VALUES (362, 6, 74, '2019-12-05 13:58:27', '2019-12-05 13:58:27', '1');
-INSERT INTO `role_permission` VALUES (363, 6, 93, '2019-12-05 13:58:27', '2019-12-05 13:58:27', '1');
-INSERT INTO `role_permission` VALUES (364, 6, 94, '2019-12-05 13:58:27', '2019-12-05 13:58:27', '1');
-INSERT INTO `role_permission` VALUES (365, 6, 95, '2019-12-05 13:58:27', '2019-12-05 13:58:27', '1');
-INSERT INTO `role_permission` VALUES (366, 6, 96, '2019-12-05 13:58:27', '2019-12-05 13:58:27', '1');
-INSERT INTO `role_permission` VALUES (367, 4, 4, '2019-12-05 13:58:42', '2019-12-05 13:58:42', '1');
-INSERT INTO `role_permission` VALUES (368, 4, 2, '2019-12-05 13:58:42', '2019-12-05 13:58:42', '1');
-INSERT INTO `role_permission` VALUES (369, 4, 21, '2019-12-05 13:58:42', '2019-12-05 13:58:42', '1');
-INSERT INTO `role_permission` VALUES (370, 4, 64, '2019-12-05 13:58:42', '2019-12-05 13:58:42', '1');
-INSERT INTO `role_permission` VALUES (371, 4, 65, '2019-12-05 13:58:42', '2019-12-05 13:58:42', '1');
-INSERT INTO `role_permission` VALUES (372, 4, 66, '2019-12-05 13:58:42', '2019-12-05 13:58:42', '1');
-INSERT INTO `role_permission` VALUES (373, 4, 22, '2019-12-05 13:58:42', '2019-12-05 13:58:42', '1');
-INSERT INTO `role_permission` VALUES (374, 4, 68, '2019-12-05 13:58:42', '2019-12-05 13:58:42', '1');
-INSERT INTO `role_permission` VALUES (375, 4, 69, '2019-12-05 13:58:42', '2019-12-05 13:58:42', '1');
-INSERT INTO `role_permission` VALUES (376, 4, 70, '2019-12-05 13:58:42', '2019-12-05 13:58:42', '1');
-INSERT INTO `role_permission` VALUES (377, 4, 23, '2019-12-05 13:58:42', '2019-12-05 13:58:42', '1');
-INSERT INTO `role_permission` VALUES (378, 4, 71, '2019-12-05 13:58:42', '2019-12-05 13:58:42', '1');
-INSERT INTO `role_permission` VALUES (379, 4, 72, '2019-12-05 13:58:42', '2019-12-05 13:58:42', '1');
-INSERT INTO `role_permission` VALUES (380, 4, 73, '2019-12-05 13:58:42', '2019-12-05 13:58:42', '1');
-INSERT INTO `role_permission` VALUES (381, 4, 5, '2019-12-05 13:58:42', '2019-12-05 13:58:42', '1');
-INSERT INTO `role_permission` VALUES (382, 4, 51, '2019-12-05 13:58:42', '2019-12-05 13:58:42', '1');
-INSERT INTO `role_permission` VALUES (383, 4, 74, '2019-12-05 13:58:42', '2019-12-05 13:58:42', '1');
-INSERT INTO `role_permission` VALUES (384, 4, 6, '2019-12-05 13:58:42', '2019-12-05 13:58:42', '1');
-INSERT INTO `role_permission` VALUES (385, 4, 61, '2019-12-05 13:58:42', '2019-12-05 13:58:42', '1');
-INSERT INTO `role_permission` VALUES (386, 4, 62, '2019-12-05 13:58:42', '2019-12-05 13:58:42', '1');
-INSERT INTO `role_permission` VALUES (387, 4, 63, '2019-12-05 13:58:42', '2019-12-05 13:58:42', '1');
-INSERT INTO `role_permission` VALUES (388, 4, 93, '2019-12-05 13:58:43', '2019-12-05 13:58:43', '1');
-INSERT INTO `role_permission` VALUES (389, 4, 94, '2019-12-05 13:58:43', '2019-12-05 13:58:43', '1');
-INSERT INTO `role_permission` VALUES (390, 4, 95, '2019-12-05 13:58:43', '2019-12-05 13:58:43', '1');
-INSERT INTO `role_permission` VALUES (391, 4, 96, '2019-12-05 13:58:43', '2019-12-05 13:58:43', '1');
-INSERT INTO `role_permission` VALUES (392, 2, 4, '2019-12-05 13:58:54', '2019-12-05 13:58:54', '1');
-INSERT INTO `role_permission` VALUES (393, 2, 3, '2019-12-05 13:58:54', '2019-12-05 13:58:54', '1');
-INSERT INTO `role_permission` VALUES (394, 2, 5, '2019-12-05 13:58:54', '2019-12-05 13:58:54', '1');
-INSERT INTO `role_permission` VALUES (395, 2, 51, '2019-12-05 13:58:54', '2019-12-05 13:58:54', '1');
-INSERT INTO `role_permission` VALUES (396, 2, 74, '2019-12-05 13:58:54', '2019-12-05 13:58:54', '1');
-INSERT INTO `role_permission` VALUES (397, 2, 6, '2019-12-05 13:58:54', '2019-12-05 13:58:54', '1');
-INSERT INTO `role_permission` VALUES (398, 2, 61, '2019-12-05 13:58:54', '2019-12-05 13:58:54', '1');
-INSERT INTO `role_permission` VALUES (399, 2, 62, '2019-12-05 13:58:54', '2019-12-05 13:58:54', '1');
-INSERT INTO `role_permission` VALUES (400, 2, 63, '2019-12-05 13:58:54', '2019-12-05 13:58:54', '1');
-INSERT INTO `role_permission` VALUES (401, 2, 93, '2019-12-05 13:58:54', '2019-12-05 13:58:54', '1');
-INSERT INTO `role_permission` VALUES (402, 2, 94, '2019-12-05 13:58:54', '2019-12-05 13:58:54', '1');
-INSERT INTO `role_permission` VALUES (403, 2, 95, '2019-12-05 13:58:54', '2019-12-05 13:58:54', '1');
-INSERT INTO `role_permission` VALUES (404, 2, 96, '2019-12-05 13:58:54', '2019-12-05 13:58:54', '1');
-INSERT INTO `role_permission` VALUES (405, 3, 4, '2019-12-06 17:20:34', '2019-12-06 17:20:34', '1');
-INSERT INTO `role_permission` VALUES (406, 3, 3, '2019-12-06 17:20:34', '2019-12-06 17:20:34', '1');
-INSERT INTO `role_permission` VALUES (407, 3, 5, '2019-12-06 17:20:34', '2019-12-06 17:20:34', '1');
-INSERT INTO `role_permission` VALUES (408, 3, 51, '2019-12-06 17:20:34', '2019-12-06 17:20:34', '1');
-INSERT INTO `role_permission` VALUES (409, 3, 6, '2019-12-06 17:20:34', '2019-12-06 17:20:34', '1');
-INSERT INTO `role_permission` VALUES (410, 3, 61, '2019-12-06 17:20:34', '2019-12-06 17:20:34', '1');
-INSERT INTO `role_permission` VALUES (411, 3, 62, '2019-12-06 17:20:34', '2019-12-06 17:20:34', '1');
-INSERT INTO `role_permission` VALUES (412, 3, 63, '2019-12-06 17:20:34', '2019-12-06 17:20:34', '1');
-INSERT INTO `role_permission` VALUES (413, 3, 93, '2019-12-06 17:20:34', '2019-12-06 17:20:34', '1');
-INSERT INTO `role_permission` VALUES (414, 3, 94, '2019-12-06 17:20:34', '2019-12-06 17:20:34', '1');
-INSERT INTO `role_permission` VALUES (415, 3, 95, '2019-12-06 17:20:34', '2019-12-06 17:20:34', '1');
-INSERT INTO `role_permission` VALUES (416, 3, 96, '2019-12-06 17:20:34', '2019-12-06 17:20:34', '1');
+INSERT INTO `role_permission` VALUES (417, 1, 4, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (418, 1, 2, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (419, 1, 21, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (420, 1, 64, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (421, 1, 65, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (422, 1, 66, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (423, 1, 22, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (424, 1, 68, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (425, 1, 69, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (426, 1, 70, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (427, 1, 23, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (428, 1, 71, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (429, 1, 72, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (430, 1, 73, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (431, 1, 3, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (432, 1, 5, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (433, 1, 51, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (434, 1, 74, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (435, 1, 6, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (436, 1, 61, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (437, 1, 62, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (438, 1, 63, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (439, 1, 92, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (440, 1, 75, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (441, 1, 88, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (442, 1, 89, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (443, 1, 90, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (444, 1, 91, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (445, 1, 93, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (446, 1, 94, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (447, 1, 95, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (448, 1, 96, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (449, 1, 97, '2019-12-24 13:59:05', '2019-12-24 13:59:05', '1');
+INSERT INTO `role_permission` VALUES (450, 2, 4, '2019-12-24 13:59:15', '2019-12-24 13:59:15', '1');
+INSERT INTO `role_permission` VALUES (451, 2, 3, '2019-12-24 13:59:15', '2019-12-24 13:59:15', '1');
+INSERT INTO `role_permission` VALUES (452, 2, 5, '2019-12-24 13:59:15', '2019-12-24 13:59:15', '1');
+INSERT INTO `role_permission` VALUES (453, 2, 51, '2019-12-24 13:59:15', '2019-12-24 13:59:15', '1');
+INSERT INTO `role_permission` VALUES (454, 2, 74, '2019-12-24 13:59:15', '2019-12-24 13:59:15', '1');
+INSERT INTO `role_permission` VALUES (455, 2, 6, '2019-12-24 13:59:15', '2019-12-24 13:59:15', '1');
+INSERT INTO `role_permission` VALUES (456, 2, 61, '2019-12-24 13:59:15', '2019-12-24 13:59:15', '1');
+INSERT INTO `role_permission` VALUES (457, 2, 62, '2019-12-24 13:59:15', '2019-12-24 13:59:15', '1');
+INSERT INTO `role_permission` VALUES (458, 2, 63, '2019-12-24 13:59:15', '2019-12-24 13:59:15', '1');
+INSERT INTO `role_permission` VALUES (459, 2, 93, '2019-12-24 13:59:15', '2019-12-24 13:59:15', '1');
+INSERT INTO `role_permission` VALUES (460, 2, 94, '2019-12-24 13:59:15', '2019-12-24 13:59:15', '1');
+INSERT INTO `role_permission` VALUES (461, 2, 95, '2019-12-24 13:59:15', '2019-12-24 13:59:15', '1');
+INSERT INTO `role_permission` VALUES (462, 2, 96, '2019-12-24 13:59:15', '2019-12-24 13:59:15', '1');
+INSERT INTO `role_permission` VALUES (463, 2, 97, '2019-12-24 13:59:15', '2019-12-24 13:59:15', '1');
+INSERT INTO `role_permission` VALUES (464, 3, 4, '2019-12-24 13:59:22', '2019-12-24 13:59:22', '1');
+INSERT INTO `role_permission` VALUES (465, 3, 3, '2019-12-24 13:59:22', '2019-12-24 13:59:22', '1');
+INSERT INTO `role_permission` VALUES (466, 3, 5, '2019-12-24 13:59:22', '2019-12-24 13:59:22', '1');
+INSERT INTO `role_permission` VALUES (467, 3, 51, '2019-12-24 13:59:22', '2019-12-24 13:59:22', '1');
+INSERT INTO `role_permission` VALUES (468, 3, 6, '2019-12-24 13:59:22', '2019-12-24 13:59:22', '1');
+INSERT INTO `role_permission` VALUES (469, 3, 61, '2019-12-24 13:59:22', '2019-12-24 13:59:22', '1');
+INSERT INTO `role_permission` VALUES (470, 3, 62, '2019-12-24 13:59:22', '2019-12-24 13:59:22', '1');
+INSERT INTO `role_permission` VALUES (471, 3, 63, '2019-12-24 13:59:22', '2019-12-24 13:59:22', '1');
+INSERT INTO `role_permission` VALUES (472, 3, 93, '2019-12-24 13:59:22', '2019-12-24 13:59:22', '1');
+INSERT INTO `role_permission` VALUES (473, 3, 94, '2019-12-24 13:59:22', '2019-12-24 13:59:22', '1');
+INSERT INTO `role_permission` VALUES (474, 3, 95, '2019-12-24 13:59:22', '2019-12-24 13:59:22', '1');
+INSERT INTO `role_permission` VALUES (475, 3, 96, '2019-12-24 13:59:22', '2019-12-24 13:59:22', '1');
+INSERT INTO `role_permission` VALUES (476, 3, 97, '2019-12-24 13:59:22', '2019-12-24 13:59:22', '1');
+INSERT INTO `role_permission` VALUES (477, 4, 4, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (478, 4, 2, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (479, 4, 21, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (480, 4, 64, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (481, 4, 65, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (482, 4, 66, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (483, 4, 22, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (484, 4, 68, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (485, 4, 69, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (486, 4, 70, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (487, 4, 23, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (488, 4, 71, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (489, 4, 72, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (490, 4, 73, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (491, 4, 5, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (492, 4, 51, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (493, 4, 74, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (494, 4, 6, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (495, 4, 61, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (496, 4, 62, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (497, 4, 63, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (498, 4, 93, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (499, 4, 94, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (500, 4, 95, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (501, 4, 96, '2019-12-24 13:59:29', '2019-12-24 13:59:29', '1');
+INSERT INTO `role_permission` VALUES (502, 4, 97, '2019-12-24 13:59:30', '2019-12-24 13:59:30', '1');
+INSERT INTO `role_permission` VALUES (503, 7, 5, '2019-12-24 13:59:37', '2019-12-24 13:59:37', '1');
+INSERT INTO `role_permission` VALUES (504, 7, 51, '2019-12-24 13:59:37', '2019-12-24 13:59:37', '1');
+INSERT INTO `role_permission` VALUES (505, 7, 74, '2019-12-24 13:59:37', '2019-12-24 13:59:37', '1');
+INSERT INTO `role_permission` VALUES (506, 7, 93, '2019-12-24 13:59:37', '2019-12-24 13:59:37', '1');
+INSERT INTO `role_permission` VALUES (507, 7, 94, '2019-12-24 13:59:37', '2019-12-24 13:59:37', '1');
+INSERT INTO `role_permission` VALUES (508, 7, 95, '2019-12-24 13:59:37', '2019-12-24 13:59:37', '1');
+INSERT INTO `role_permission` VALUES (509, 7, 96, '2019-12-24 13:59:37', '2019-12-24 13:59:37', '1');
+INSERT INTO `role_permission` VALUES (510, 7, 97, '2019-12-24 13:59:37', '2019-12-24 13:59:37', '1');
+INSERT INTO `role_permission` VALUES (511, 6, 2, '2019-12-24 13:59:43', '2019-12-24 13:59:43', '1');
+INSERT INTO `role_permission` VALUES (512, 6, 21, '2019-12-24 13:59:43', '2019-12-24 13:59:43', '1');
+INSERT INTO `role_permission` VALUES (513, 6, 64, '2019-12-24 13:59:43', '2019-12-24 13:59:43', '1');
+INSERT INTO `role_permission` VALUES (514, 6, 65, '2019-12-24 13:59:43', '2019-12-24 13:59:43', '1');
+INSERT INTO `role_permission` VALUES (515, 6, 66, '2019-12-24 13:59:43', '2019-12-24 13:59:43', '1');
+INSERT INTO `role_permission` VALUES (516, 6, 22, '2019-12-24 13:59:43', '2019-12-24 13:59:43', '1');
+INSERT INTO `role_permission` VALUES (517, 6, 68, '2019-12-24 13:59:43', '2019-12-24 13:59:43', '1');
+INSERT INTO `role_permission` VALUES (518, 6, 69, '2019-12-24 13:59:43', '2019-12-24 13:59:43', '1');
+INSERT INTO `role_permission` VALUES (519, 6, 70, '2019-12-24 13:59:43', '2019-12-24 13:59:43', '1');
+INSERT INTO `role_permission` VALUES (520, 6, 23, '2019-12-24 13:59:43', '2019-12-24 13:59:43', '1');
+INSERT INTO `role_permission` VALUES (521, 6, 71, '2019-12-24 13:59:43', '2019-12-24 13:59:43', '1');
+INSERT INTO `role_permission` VALUES (522, 6, 72, '2019-12-24 13:59:43', '2019-12-24 13:59:43', '1');
+INSERT INTO `role_permission` VALUES (523, 6, 73, '2019-12-24 13:59:43', '2019-12-24 13:59:43', '1');
+INSERT INTO `role_permission` VALUES (524, 6, 5, '2019-12-24 13:59:43', '2019-12-24 13:59:43', '1');
+INSERT INTO `role_permission` VALUES (525, 6, 51, '2019-12-24 13:59:43', '2019-12-24 13:59:43', '1');
+INSERT INTO `role_permission` VALUES (526, 6, 74, '2019-12-24 13:59:43', '2019-12-24 13:59:43', '1');
+INSERT INTO `role_permission` VALUES (527, 6, 93, '2019-12-24 13:59:43', '2019-12-24 13:59:43', '1');
+INSERT INTO `role_permission` VALUES (528, 6, 94, '2019-12-24 13:59:43', '2019-12-24 13:59:43', '1');
+INSERT INTO `role_permission` VALUES (529, 6, 95, '2019-12-24 13:59:43', '2019-12-24 13:59:43', '1');
+INSERT INTO `role_permission` VALUES (530, 6, 96, '2019-12-24 13:59:43', '2019-12-24 13:59:43', '1');
+INSERT INTO `role_permission` VALUES (531, 6, 97, '2019-12-24 13:59:43', '2019-12-24 13:59:43', '1');
 
 -- ----------------------------
 -- Table structure for user
