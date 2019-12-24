@@ -10,6 +10,9 @@
 首页
 ![输入图片说明](https://images.gitee.com/uploads/images/2019/1218/132607_37a29ce6_914343.png "屏幕截图.png")
 
+shiro权限控制（精确至按钮级别）：
+![输入图片说明](https://images.gitee.com/uploads/images/2019/1224/160736_3ac449d3_914343.png "屏幕截图.png")
+
 并行网关下单方执行完成
 ![输入图片说明](https://images.gitee.com/uploads/images/2019/1218/134750_44a8107b_914343.png "屏幕截图.png")
 
