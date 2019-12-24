@@ -108,6 +108,7 @@
                        const  highPoint= res.highPoint;
                        const  highLine = res.highLine;
                        const waitingToDo = res.waitingToDo;
+                       const iDo = res.iDo;
 
 
                        //走过的线设置高亮
@@ -120,8 +121,7 @@
                             }
 
                         })
-
-                        //节点设置高亮
+                        //完成的节点设置高亮
                         highPoint.forEach(function (e) {
                             const highPointEle = elementRegistry.get(e);
                             // highPoints.push(highLineEle)
@@ -130,13 +130,24 @@
                                 fill: 'rgba(0, 80, 0, 0.4)'
                             });
                         })
-
+                        //当前 待办节点
                         waitingToDo.forEach(function (e) {
                             const waitingEle = elementRegistry.get(e);
                             modeling.setColor(waitingEle, {
                                 stroke: 'green',
                                 fill: 'rgba(255,255,0, 0.8)',
                             });
+                        })
+
+                        //我的 办理节点
+                        iDo.forEach(function (e) {
+                            if(e!=null){
+                                const highLineEle =  elementRegistry.get(e)
+                                modeling.setColor(highLineEle, {
+                                    stroke: '#FF0000',
+                                    fill: 'rgba(224 ,102 ,255 ,0.8)',
+                                });
+                            }
                         })
 
                     }

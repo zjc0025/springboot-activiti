@@ -41,6 +41,7 @@ import java.util.stream.Collectors;
  */
 @Controller
 @RequestMapping("web/act")
+@SuppressWarnings("all")
 public class ActivityController {
 
 
@@ -418,6 +419,7 @@ public class ActivityController {
                 .unfinished()
                 .list();
 
+        //需要移除的高亮连线
         Set<String> set = new HashSet<>();
         //待办高亮节点
         Set<String> waitingToDo = new HashSet<>();
@@ -446,12 +448,76 @@ public class ActivityController {
 
         highLine.removeAll(set);
 
+
+        //获取当前用户
+        User sysUser = getSysUser();
+        Set<String> iDo = new HashSet<>(); //存放 高亮 我的办理节点
+        //当前用户已完成的任务
+        List<HistoricTaskInstance> taskInstanceList = historyService.createHistoricTaskInstanceQuery()
+                .taskAssignee(sysUser.getUsername())
+                .finished()
+                .processInstanceId(instanceId).list();
+
+        taskInstanceList.forEach(a->iDo.add(a.getTaskDefinitionKey()));
+
         Map<String,Object> reMap = new HashMap<>();
         reMap.put("highPoint",highPoint);
         reMap.put("highLine",highLine);
         reMap.put("waitingToDo",waitingToDo);
+        reMap.put("iDo",iDo);
 
         return reMap;
+    }
+
+    @RequestMapping("/hisWork")
+    @ResponseBody
+    public JsonResponse hisWork(Integer page , Integer limit){
+        JsonResponse jsonResponse = new JsonResponse();
+        User sysUser = getSysUser();
+        List<HistoricTaskInstance> historicTaskInstances = historyService.createHistoricTaskInstanceQuery()
+                .taskAssignee(sysUser.getUsername())
+                .listPage(page - 1, limit);
+
+        long count = historyService.createHistoricTaskInstanceQuery()
+                .taskAssignee(sysUser.getUsername())
+                .count();
+
+        List<Map<String,Object>> mapList = new ArrayList<>();
+        historicTaskInstances.forEach(s->{
+
+            HistoricProcessInstance his = historyService.createHistoricProcessInstanceQuery()
+                    .processInstanceId(s.getProcessInstanceId()).singleResult();
+
+            Map<String,Object> map = new HashMap();
+            map.put("name",his.getStartUserId()+"_"+his.getProcessDefinitionName());
+            map.put("startTime",his.getStartTime());
+            map.put("id",his.getId());
+
+            ProcessInstance processInstance = runtimeService.createProcessInstanceQuery()
+                    .processInstanceId(his.getId())
+                    .singleResult();
+            if(processInstance==null){
+                map.put("status","已完成");
+            }else{
+                map.put("status","执行中");
+            }
+            mapList.add(map);
+        });
+        jsonResponse.setData(mapList);
+        jsonResponse.setCount(count);
+
+        return jsonResponse;
+    }
+
+    @RequestMapping("/hisWorkIndex")
+    public String goToHisWorkIndex(){
+        return "act/act-his-work";
+    }
+
+    public static User getSysUser(){
+        Subject subject = SecurityUtils.getSubject();
+        User principal = (User) subject.getPrincipal();
+        return principal;
     }
 
 }
