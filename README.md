@@ -58,10 +58,10 @@ jdk8 ，nodeJs
 
 ### activiti动画展示
 
-[ **动态效果展示**  :fa-paper-plane: ](http://182.92.122.242:8090/exam/activiti7.mp4)
+[ **动态效果展示**  :fa-paper-plane: ](http://94.191.104.202:8090/eaxm/activiti7.mp4)
 
 ### 之前做的小demo轨迹展示一并展示给大家
 
-[ **动态效果展示**  :fa-paper-plane: ](http://182.92.122.242:8090/exam/xuanzhuan.mp4)
+[ **动态效果展示**  :fa-paper-plane: ](http://94.191.104.202:8090/eaxm/route.mp4)
 
  **_希望小伙伴点个赞再走，有问题留言交流_**   :smile: 
