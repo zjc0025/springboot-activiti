@@ -4,9 +4,11 @@ import com.bzgwl.mybatis_plus.sys.service.IUserRoleService;
 import com.bzgwl.mybatis_plus.sys.service.IUserService;
 import com.bzgwl.mybatis_plus.sys.entity.User;
 import com.bzgwl.mybatis_plus.utils.JsonResponse;
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.Logical;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.authz.annotation.RequiresRoles;
+import org.apache.shiro.subject.Subject;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -33,6 +35,18 @@ public class UserController {
 
     @Autowired
     private IUserRoleService userRoleService;
+
+
+    @RequestMapping("getUser")
+    @ResponseBody
+    public String getUser(){
+
+        Subject currentUser = SecurityUtils.getSubject();
+        User user = currentUser.getPrincipals().oneByType(User.class);
+        return user.getUsername();
+    }
+
+
 
     /**
     * list跳转
